@@ -7,10 +7,10 @@ import {
   Facebook,
   Twitter,
   Instagram,
-  PaperPlane,
 } from "lucide-react";
+import toast from "react-hot-toast";
 
-import "react-toastify/dist/ReactToastify.css";
+// import "react-toastify/dist/ReactToastify.css";
 
 const Contact = ({ ref }) => {
   const [formData, setFormData] = useState({
@@ -47,7 +47,7 @@ const Contact = ({ ref }) => {
       .then(
         () => {
           setIsSubmitting(false);
-          alert("Submitted Successfully");
+          toast("Submitted Successfully");
           setFormData({
             email: "",
             name: "",
@@ -57,7 +57,7 @@ const Contact = ({ ref }) => {
         },
         () => {
           setIsSubmitting(false);
-          alert("Submission failed");
+          toast("Submission failed");
         }
       );
   };
@@ -151,7 +151,7 @@ const Contact = ({ ref }) => {
             className="w-full rounded-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-700 text-white py-3 px-6 shadow-lg hover:from-orange-600 hover:to-orange-500 focus:ring-2 focus:ring-orange-400 focus:outline-none transition-transform transform hover:scale-105"
             disabled={isSubmitting}
           >
-            <PaperPlane className="mr-2 h-5 w-5" />
+            {/* <PaperPlane className="mr-2 h-5 w-5" /> */}
             {isSubmitting ? "Submitting..." : "Submit Now"}
           </button>
         </form>
