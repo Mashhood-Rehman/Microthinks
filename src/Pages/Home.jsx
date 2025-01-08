@@ -2,6 +2,7 @@ import HeroSection from "../Header/HeroSection";
 import OTAPlatforms from "../Pages/OTAPlatforms";
 import Services from "../Pages/Services";
 import Specialist from "../Specialist";
+import Contact from "./Contact";
 const Home = () => {
   return (
     <div>
@@ -9,6 +10,7 @@ const Home = () => {
       <Specialist />
       <Services />
       <OTAPlatforms />
+      <Contact />
     </div>
   );
 };
