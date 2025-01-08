@@ -16,7 +16,7 @@ const DigitalMarketingPage = () => {
 
   const services = [
     'Custom Website Design',
-    'UI/UX Designing dldfldfdfldflklkdfkd',
+    'UI/UX Designing',
     ' Website Redesign',
     'Landing Page Design',
     'Branding and Visual Design',

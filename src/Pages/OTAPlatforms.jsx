@@ -144,7 +144,7 @@ export default function OTAPlatforms() {
                   .getElementById("Contact-page")
                   .scrollIntoView({ behavior: "smooth" });
               }}
-              className="outline outline-2 text-[#1F2456] group hover:rounded-3xl duration-300 hover:outline-orange-500"
+              className="outline px-3 py-2 outline-2 text-[#1F2456] group hover:rounded-3xl duration-300 hover:outline-orange-500"
             >
               Contact Us{" "}
               <ChevronRight className="w-5 h-5 inline-block ml-2 transform group-hover:translate-x-1 transition-transform" />
