@@ -12,7 +12,7 @@ const tabs = [
 ];
 
 export default function Specialist() {
-  const [activeTab, setActiveTab] = useState("Hotel marketing Services");
+  const [activeTab, setActiveTab] = useState("Hotel marketing services");
   const [mounted, setMounted] = useState(false);
 
   const renderContent = () => {
