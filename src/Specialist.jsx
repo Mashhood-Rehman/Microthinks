@@ -78,10 +78,10 @@ export default function Specialist() {
 
             {/* Right Column: Title & Description */}
             <div className="">
-              <h2 className="text-2xl w-96 lg:text-3xl font-serif mb-4">
+              <h2 className="text-xl w-72 lg:w-96  lg:text-3xl font-serif mb-4">
                 {activeContent.title}
               </h2>
-              <p className="text-gray-600 w-96 leading-relaxed mb-4">
+              <p className="text-gray-600 text-sm w-72 lg:w-96 leading-relaxed mb-4">
                 {activeContent.description}
               </p>
             </div>
@@ -139,11 +139,11 @@ export default function Specialist() {
       </motion.div>
 
       {/* Navbar buttons for tabs */}
-      <div className="flex gap-4 mb-6">
+      <div className="grid grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`py-2 px-4 rounded-lg font-medium ${
+            className={`py-2 px-4 rounded-lg text-md lg:text-lg ${
               activeTab === tab ? "bg-[#1F2456] text-white" : " text-gray-700"
             }  hover:bg-[#1F2456] hover:text-white transition-colors duration-300`}
             onClick={() => setActiveTab(tab)}
@@ -153,7 +153,6 @@ export default function Specialist() {
         ))}
       </div>
 
-      {/* Display the content based on activeTab */}
       <div className="p-5 rounded-lg">
         <motion.div
           className=" "

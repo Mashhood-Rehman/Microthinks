@@ -10,8 +10,6 @@ import {
 } from "lucide-react";
 import toast from "react-hot-toast";
 
-// import "react-toastify/dist/ReactToastify.css";
-
 const Contact = ({ ref }) => {
   const [formData, setFormData] = useState({
     email: "",
