@@ -7,6 +7,8 @@ import {
   Facebook,
   Twitter,
   Instagram,
+  Link,
+  Linkedin,
 } from "lucide-react";
 import toast from "react-hot-toast";
 
@@ -69,37 +71,67 @@ const Contact = ({ ref }) => {
       <div className="max-w-7xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Contact Info Section */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-gray-500">Get In Touch</h2>
-          <p className="text-gray-500">
-            MicroThinks drives hotel growth with tailored digital solutions and
-            expert support to maximize your online presence and revenue.
-          </p>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 p-3 rounded-full shadow-lg">
-                <Phone className="h-5 w-5 text-[#1F2456]" />
-              </div>
-              <span className="text-gray-500">+92 308 4512116</span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 p-3 rounded-full shadow-lg">
-                <Mail className="h-5 w-5 text-[#1F2456]" />
-              </div>
-              <span className="text-gray-500">info@microthinks.com</span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 p-3 rounded-full shadow-lg">
-                <MapPin className="h-5 w-5 text-[#1F2456]" />
-              </div>
-              <span className="text-gray-500">Pakistan, Lahore</span>
-            </div>
-          </div>
-          <div className="flex space-x-4 pt-6">
-            <Facebook className="text-white hover:text-orange-500 transition-transform transform hover:scale-125" />
-            <Twitter className="text-white hover:text-orange-500 transition-transform transform hover:scale-125" />
-            <Instagram className="text-white hover:text-orange-500 transition-transform transform hover:scale-125" />
-          </div>
-        </div>
+  <h2 className="text-3xl font-bold text-[#1F2456]">Get In Touch</h2>
+  <p className="text-gray-500">
+    MicroThinks drives hotel growth with tailored digital solutions and
+    expert support to maximize your online presence and revenue.
+  </p>
+  <div className="space-y-4">
+    {/* Phone Link */}
+    <a href="tel:+923084512116" className="flex items-center space-x-4">
+      <div className="bg-blue-100  hover:bg-orange-300 p-3 rounded-full shadow-lg">
+        <Phone className="h-5 w-5 text-[#1F2456]" />
+      </div>
+      <span className="text-gray-500 hover:text-orange-500">+92 308 4512116</span>
+    </a>
+    {/* Email Link */}
+    <a href="mailto:info@microthinks.com" className="flex items-center space-x-4">
+      <div className="bg-blue-100 p-3 hover:bg-orange-300 rounded-full shadow-lg">
+        <Mail className="h-5 w-5 text-[#1F2456]" />
+      </div>
+      <span className="text-gray-500 hover:text-orange-500">info@microthinks.com</span>
+    </a>
+    {/* Location Link */}
+    <a
+     href="https://maps.app.goo.gl/tZvbk84Xks1YcW6G6"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center space-x-4"
+    >
+      <div className="bg-blue-100 hover:bg-orange-300  p-3 rounded-full shadow-lg">
+        <MapPin className="h-5 w-5 text-[#1F2456]" />
+      </div>
+      <span className="text-gray-500 hover:text-orange-500 ">Pakistan, Lahore</span>
+    </a>
+  </div> 
+  {/* Social Media Icons */}
+  <div className="flex space-x-4 pt-6">
+    <a
+      href="https://facebook.com" // Replace with actual Facebook link
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-500 hover:text-orange-500 transition-transform transform hover:scale-125"
+    >
+      <Facebook />
+    </a>
+    <a
+       href="https://www.linkedin.com/company/microthinks/posts/?feedView=all"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-500 hover:text-orange-500 transition-transform transform hover:scale-125"
+    >
+      <Linkedin />
+    </a>
+    <a
+    href="https://www.instagram.com/microthinks?igsh=YnJ4cGJkem9zZWtx"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-500 hover:text-orange-500 transition-transform transform hover:scale-125"
+    >
+      <Instagram />
+    </a>
+  </div>
+</div>
 
         {/* Form Section */}
         <form
@@ -146,7 +178,7 @@ const Contact = ({ ref }) => {
           ></textarea>
           <button
             type="submit"
-            className="w-full rounded-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-700 text-white py-3 px-6 shadow-lg hover:from-orange-600 hover:to-orange-500 focus:ring-2 focus:ring-orange-400 focus:outline-none transition-transform transform hover:scale-105"
+            className="w-full rounded-full flex items-center justify-center bg-orange-500  text-white py-3 px-6 shadow-lg hover:from-orange-600 hover:to-orange-500 focus:ring-2 focus:ring-orange-400 focus:outline-none transition-transform transform hover:scale-105"
             disabled={isSubmitting}
           >
             {/* <PaperPlane className="mr-2 h-5 w-5" /> */}

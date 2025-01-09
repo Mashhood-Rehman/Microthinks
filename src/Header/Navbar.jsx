@@ -36,7 +36,7 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 ease-in-out transition-all duration-300 ${
         isScrolled
-          ? "bg-white text-black backdrop-blur-md shadow-md"
+          ? "bg-[#1F2456] text-white backdrop-blur-md shadow-md"
           : "bg-transparent text-white"
       }`}
     >
@@ -46,7 +46,7 @@ export default function Navbar() {
           <div style={{ width: "100px", height: "50px" }}>
             <img
               onClick={ScrollToTop}
-              src="/Logo.webp"
+              src="/Assets1.png"
               className="w-full h-auto cursor-pointer"
               alt="MicroThink logo image"
               height="50"

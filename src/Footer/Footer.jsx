@@ -64,7 +64,7 @@ export default function Footer() {
   if (!isClient) return null;
 
   return (
-    <footer className="bg-[#001233] text-white">
+    <footer className="bg-[#1F2456] text-white">
       <div className="container px-4 py-8 mx-auto">
         {/* Top Section: Logo and Social Icons */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
@@ -202,19 +202,7 @@ export default function Footer() {
                 Privacy Policy
               </Link>
 
-              <a href="/privacy-policy">
-                <div className="text-center items-center justify-center">
-                  <button
-                    className={`text-sm font-medium ${
-                      service.featured
-                        ? "text-white hover:text-white/80"
-                        : "text-orange-500 hover:text-orange-600"
-                    } transition-all duration-300 transform hover:scale-105`}
-                  >
-                    Learn More →
-                  </button>
-                </div>
-              </a>
+              
             </div>
           </div>
         </div>
