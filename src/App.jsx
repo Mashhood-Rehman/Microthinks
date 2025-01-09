@@ -7,12 +7,14 @@ import SocialMediaMarketing from "./ServicesDetailing/SocialMediaMarketing";
 import PropertyManagementSystem from "./ServicesDetailing/PropertyManagementSystem";
 import RevenueManagementSystem from "./ServicesDetailing/RevenueManagementSystem";
 import OTAListingManagement from "./ServicesDetailing/OTAListingManagement";
+import TermsandCondition from "./T&Cs/TermsandCondition";
+import PrivacyPolicy from "./T&Cs/PrivacyPolicy";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/WebDesign" element={<WebDesign />} />
         <Route
           path="/Google Ads Management"
@@ -35,6 +37,8 @@ const App = () => {
           path="/OTAListingManagement"
           element={<OTAListingManagement />}
         />
+        <Route path="/TermsandCondition" element={<TermsandCondition />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
       </Routes>
     </div>
   );

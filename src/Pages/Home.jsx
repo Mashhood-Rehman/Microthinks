@@ -1,7 +1,7 @@
 import HeroSection from "../Header/HeroSection";
 import OTAPlatforms from "../Pages/OTAPlatforms";
 import Services from "../Pages/Services";
-import Specialist from "../Specialist";
+import Specialist from "../Pages/Specialist";
 import Contact from "./Contact";
 const Home = () => {
   return (
