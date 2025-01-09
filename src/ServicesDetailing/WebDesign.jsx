@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import Webdes from "../ServicesDetailing/Webdes.jsx";
 
-const WebDesign = () => {
+const WebDesign = () => { 
+   useEffect(()=>{
+    scrollTo(0,0)
+   })
   return (
     <div className="min-h-80 bg-gray-900">
       {/* Navigation Badge */}
@@ -41,7 +45,7 @@ const WebDesign = () => {
               <img
                 src="/public/Hotel1.webp"
                 alt="Office"
-                className="object-cover w-full h-full"
+                className="object-contain w-full h-auto"
               />
             </div>
           </div>

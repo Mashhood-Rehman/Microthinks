@@ -1,5 +1,7 @@
 const GoogleAdsManagement = () => {
-  return <div></div>;
+  return <div>
+    
+  </div>;
 };
 
 export default GoogleAdsManagement;
