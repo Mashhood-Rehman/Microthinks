@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Navbar from "./Header/Navbar";
+import Navbar from "../Header/Navbar";
 
 const tabs = [
   "Hotel marketing services",
