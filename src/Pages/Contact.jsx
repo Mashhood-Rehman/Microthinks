@@ -37,15 +37,15 @@ const Contact = ({ ref }) => {
 
     emailjs
       .send(
-        import.meta.process.env.VITE_PUBLIC_EMAILJS_SERVICE_ID,
-        import.meta.process.env.VITE_PUBLIC_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_PUBLIC_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_PUBLIC_EMAILJS_TEMPLATE_ID,
         templateParams,
-        import.meta.process.env.VITE_PUBLIC_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
           setIsSubmitting(false);
-          toast("Submitted Successfully");
+          toast.success("Submitted Successfully");
           setFormData({
             email: "",
             name: "",
@@ -55,7 +55,7 @@ const Contact = ({ ref }) => {
         },
         () => {
           setIsSubmitting(false);
-          toast("Submission failed");
+          toast.error("Submission failed");
         }
       );
   };

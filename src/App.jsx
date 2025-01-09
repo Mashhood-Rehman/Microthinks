@@ -9,6 +9,7 @@ import RevenueManagementSystem from "./ServicesDetailing/RevenueManagementSystem
 import OTAListingManagement from "./ServicesDetailing/OTAListingManagement";
 import TermsandCondition from "./T&Cs/TermsandCondition";
 import PrivacyPolicy from "./T&Cs/PrivacyPolicy";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/TermsandCondition" element={<TermsandCondition />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
       </Routes>
+      <Toaster />
     </div>
   );
 };
