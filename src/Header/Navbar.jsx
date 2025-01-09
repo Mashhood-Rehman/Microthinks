@@ -22,15 +22,14 @@ export default function Navbar() {
   };
 
   const navbar = [
-    { name: "Home", id: "home" },
+    { name: "Home", id: "" },
     { name: "About", id: "about-us" },
     { name: "Services", id: "service" },
     { name: "OTA Platforms", id: "Ota-Platforms" },
     { name: "Contact", id: "Contact-page" },
   ];
 
-  // Check if we are on the homepage
-  const isHomePage = location.pathname === "/home";
+  const isHomePage = location.pathname === "/";
 
   return (
     <nav

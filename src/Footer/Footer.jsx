@@ -175,7 +175,7 @@ export default function Footer() {
                 name="email"
                 type="email"
                 placeholder="Email"
-                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white  focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               />
               <button
                 type="submit"
