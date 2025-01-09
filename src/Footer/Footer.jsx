@@ -1,10 +1,56 @@
 import { useState, useEffect } from "react";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+
+import emailjs from "emailjs-com";
 
 export default function Footer() {
   const [isClient, setIsClient] = useState(false);
   const [service, setService] = useState({ featured: false });
+
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const templateParams = {
+      email: formData.email,
+    };
+
+    emailjs
+      .send(
+        import.meta.env.VITE_PUBLIC_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_PUBLIC_EMAILJS_NEWS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setIsSubmitting(false);
+          toast.success("Submitted Successfully");
+          setFormData({
+            email: "",
+          });
+        },
+        () => {
+          setIsSubmitting(false);
+          toast.error("Submission failed");
+        }
+      );
+  };
 
   useEffect(() => {
     setIsClient(true);
@@ -122,8 +168,11 @@ export default function Footer() {
             <p className="mb-4 text-sm text-gray-300">
               Sign up to our newsletter to receive our latest offers
             </p>
-            <form className="space-y-2">
+            <form className="space-y-2" onSubmit={handleSubmit}>
               <input
+                value={formData.email}
+                onChange={handleChange}
+                name="email"
                 type="email"
                 placeholder="Email"
                 className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
@@ -131,8 +180,10 @@ export default function Footer() {
               <button
                 type="submit"
                 className="w-full px-4 py-2 text-sm font-medium text-white bg-orange-600 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#001233]"
+                disabled={isSubmitting}
               >
-                Go Sign Up
+                {/* <PaperPlane className="mr-2 h-5 w-5" /> */}
+                {isSubmitting ? "Signing up..." : "Signup now"}
               </button>
             </form>
           </div>
