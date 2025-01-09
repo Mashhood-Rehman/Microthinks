@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram ,  Linkedin } from 'lucide-react'
+import { Link } from "react-router-dom";
+
 
 export default function Footer() {
   const [isClient, setIsClient] = useState(false);
@@ -17,165 +19,142 @@ export default function Footer() {
   if (!isClient) return null;
 
   return (
-    <footer className="bg-[#1e2756] text-white">
-      <div className="container px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left Column */}
-          <div>
-            <div className="mb-8">
-              <div className="flex items-center gap-2 mb-2">
-                <img
+   <footer className="bg-[#001233] text-white">
+    <div className="container px-4 py-8 mx-auto">
+      {/* Top Section: Logo and Social Icons */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <div className="w-32">
+                     <img
                   src="/Assets1.png"
                   height={100}
                   width={100}
                   alt="microthinks-logo"
                   className="w-48 h-auto"
                 />
-              </div>
-              <p className="text-sm">
-                MicroThinks drives hotel growth with tailored digital solutions
-                and expert support to maximize your online presence and revenue.
-              </p>
-            </div>
+        </div>
+        <div className="flex gap-4">
+  <a
+    href="https://www.facebook.com/Microthinksbyzaheer?mibextid=LQQJ4d"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 hover:text-orange-500"
+  >
+    <Facebook className="w-5 h-5" />
+    <span className="sr-only">Facebook</span>
+  </a>
+  <a
+    href="https://www.linkedin.com/company/microthinks/posts/?feedView=all"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 hover:text-orange-500"
+  >
+    <Linkedin className="w-5 h-5" />
+    <span className="sr-only">LinkedIn</span>
+  </a>
+  <a
+    href="https://www.instagram.com/microthinks?igsh=YnJ4cGJkem9zZWtx"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 hover:text-orange-500"
+  >
+    <Instagram className="w-5 h-5" />
+    <span className="sr-only">Instagram</span>
+  </a>
+</div>
 
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-2">Exclusive Offers</h3>
-              <p className="text-sm mb-2">
-                Sign up to our newsletter to receive our latest offers
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Your Email*"
-                  className="px-3 py-2 rounded bg-white text-black flex-1"
-                />
-                <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded transition-transform transform hover:scale-105">
-                  Submit
-                </button>
-              </div>
-            </div>
-          </div>
+      </div>
 
-          {/* Middle Column */}
-          <div>
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-2">Need Help?</h3>
-              <ul className="space-y-1 text-sm">
-                <li>
-                  <a href="#" className="hover:text-gray-300">
-                    Manage Booking
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-300">
-                    Support
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Services</h3>
-              <ul className="space-y-1 text-sm">
-                <li>
-                  <a href="#" className="hover:text-gray-300">
-                    Website Development
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-300">
-                    Google Ads Campaigns
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-300">
-                    Property Management System
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-300">
-                    Revenue Management System
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-300">
-                    OTA Listing Management
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-300">
-                    Social Media Marketing
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Right Column */}
-          <div>
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-2">You want to Book?</h3>
-              <p className="text-sm">Call us: +92 308 4512116</p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-2">Get in touch</h3>
-              <p className="text-sm">info@microthinks.com</p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Office</h3>
-              <p className="text-sm mb-1">
-                Lawrence Road, Near China Chowk, Lahore, Punjab, Pakistan
-              </p>
-              <p className="text-sm">Mon to Sat: 9am to 5pm</p>
-            </div>
+      
+      <div className="grid gap-8 mb-8 md:grid-cols-2 lg:grid-cols-4">
+        
+        <div>
+          <h3 className="mb-4 text-lg font-semibold">Services</h3>
+          <div className="space-y-2 text-sm text-gray-300">
+            <p>Website Development</p>
+            <p>Google Ads Campaigns</p>
+            <p>Property Management System</p>
+            <p className="mt-4">Revenue Management System</p>
+            <p className="mt-4">OTA Listing Management</p>
+            <p className="mt-4">Social Media Marketing</p>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-gray-600">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="hover:text-gray-300 transform transition-all duration-300"
-              >
-                <Facebook className="w-6 h-6" />
-              </a>
-              <a
-                href="#"
-                className="hover:text-gray-300 transform transition-all duration-300"
-              >
-                <Instagram className="w-6 h-6" />
-              </a>
-              <a
-                href="#"
-                className="hover:text-gray-300 transform transition-all duration-300"
-              >
-                <Linkedin className="w-6 h-6" />
-              </a>
-            </div>
+        
+        <div>
+          <h3 className="mb-4 text-lg font-semibold">Get In Touch</h3>
+          <nav className="space-y-2 text-sm">
+            <Link   href="mailto:info@microthinks.com   " className="block text-gray-300 hover:text-white">
+            info@microthinks.com
+            </Link>
+            <Link href="https://maps.app.goo.gl/tZvbk84Xks1YcW6G6" className="block text-gray-300 hover:text-white">
+            Lawrence Road, Near China Chowk, Lahore, Punjab, Pakistan
+            </Link>
+            <Link to="#" className="block text-gray-300 hover:text-white">
+            Mon to Sat: 9am to 5pm
+            </Link>
+            <Link to="#" className="block text-gray-300 hover:text-white">
+            Call at: +92 306 4312116
+            </Link>
+          </nav>
+        </div>
 
-            <div className="flex gap-8 text-sm">
-              <a href="#" className="hover:text-gray-300">
-                T&Cs
-              </a>
-              <a href="/privacy-policy" className="hover:text-gray-300">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-gray-300">
-                Legal Notice
-              </a>
-            </div>
-          </div>
+   
+        <div>
+          <h3 className="mb-4 text-lg font-semibold">Need Help?</h3>
+          <nav className="space-y-2 text-sm">
+            <Link to="#" className="block text-gray-300 hover:text-white">
+              Help Center
+            </Link>
+            <Link to="#" className="block text-gray-300 hover:text-white">
+             Support
+            </Link>
+            <Link to="#" className="block text-gray-300 hover:text-white">
+            Manage Booking
+            </Link>
+            <Link to="#" className="block text-gray-300 hover:text-white">
+              Contact Us
+            </Link>
+          </nav>
+        </div>
 
-          <div className="mt-4 text-center text-sm">
-            Copyright © MicroThinks 2024 All rights reserved
-          </div>
-          <a href="/privacy-policy">
-            <div className="text-center items-center justify-center">
-              <button
+    
+        <div>
+          <h3 className="mb-4 text-lg font-semibold">Newsletter</h3>
+          <p className="mb-4 text-sm text-gray-300">
+          Sign up to our newsletter to receive our latest offers
+          </p>
+          <form className="space-y-2">
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            />
+            <button
+              type="submit"
+              className="w-full px-4 py-2 text-sm font-medium text-white bg-orange-600 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#001233]"
+            >
+              Go Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div className="pt-4 text-sm border-t border-white/10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <p className="text-gray-400">
+          Copyright © MicroThinks 2024 All rights reserved
+          </p>
+          <div className="flex flex-wrap gap-4 text-gray-400">
+            <Link to="#" className="hover:text-white">
+              Terms of Use
+            </Link>
+            <Link to="#" className="hover:text-white">
+              Privacy Policy
+            </Link>
+           
+            <a href="/privacy-policy">
+             <div className="text-center items-center justify-center">
+               <button
                 className={`text-sm font-medium ${
                   service.featured
                     ? "text-white hover:text-white/80"
@@ -186,8 +165,13 @@ export default function Footer() {
               </button>
             </div>
           </a>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
+
+  
+
   );
 }
