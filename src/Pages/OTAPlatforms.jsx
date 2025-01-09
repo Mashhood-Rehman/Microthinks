@@ -79,24 +79,7 @@ export default function OTAPlatforms() {
               </div>
             ))}
           </div>
-          <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-            <button
-              onClick={prevImage}
-              className="p-2 rounded-full bg-gray-500 text-white"
-              aria-label="Previous image"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-          </div>
-          <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
-            <button
-              onClick={nextImage}
-              className="p-2 rounded-full bg-gray-500 text-white"
-              aria-label="Next image"
-            >
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
+         
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
             {images.map((_, index) => (
               <button
@@ -134,7 +117,7 @@ export default function OTAPlatforms() {
                 ))}
             </div>
             <span className="text-gray-600">
-              Trusted by 1000+ hotels worldwide
+              Trusted by 100+ hotels worldwide
             </span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">

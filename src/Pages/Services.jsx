@@ -80,7 +80,7 @@ export default function Services() {
             <div
               key={index}
               className={`rounded-lg shadow-lg overflow-hidden transition-transform duration-300 font-serif hover:-translate-y-1 ${
-                service.featured ? "bg-[#1a2b4d] text-white" : "bg-white"
+                service.featured ? "bg-[#1F2456] text-white" : "bg-white"
               }`}
             >
               <div className="p-6">

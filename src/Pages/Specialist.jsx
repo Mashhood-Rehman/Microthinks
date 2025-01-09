@@ -143,8 +143,8 @@ export default function Specialist() {
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`py-2 px-4 rounded-lg text-md lg:text-lg ${
-              activeTab === tab ? "bg-[#1F2456] text-white" : " text-gray-700"
+            className={`  border px-2 py-1 border-gray-500  rounded-full text-md lg:text-md ${
+              activeTab === tab ? "bg-[#1F2456] text-white" : " text-gray-800"
             }  hover:bg-[#1F2456] hover:text-white transition-colors duration-300`}
             onClick={() => setActiveTab(tab)}
           >
