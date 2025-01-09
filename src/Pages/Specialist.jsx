@@ -13,21 +13,21 @@ const tabs = [
 
 const tabContent = [
   {
-    pic: "/pp.webp",
+    pic: "/Hotel1.webp",
     tabName: "Hotel marketing services",
     title: "Boost Your Hotel’s Success with Our Expert Marketing Solutions",
     description:
       "At Microthinks.com, we elevate your hotel’s online visibility with innovative and customized solutions to strengthen guest satisfaction. We leverage our skills in hotel marketing services, providing digital tactics for the hospitality industry. Our mission is to increase your hotel’s digital footprint and profitability through our tailored hotel promotion strategies.",
   },
   {
-    pic: "/ppp.webp",
+    pic: "/Sitting.jpg",
     tabName: "Hotel's direct booking",
     title: "Maximize Your Hotel's Direct Bookings",
     description:
       "Our tailored strategies help hotels increase direct bookings, reducing reliance on OTAs while improving profitability and customer relationships. We provide innovative marketing techniques and optimize booking platforms for greater conversion rates.",
   },
   {
-    pic: "/pp.webp",
+    pic: "/public/wp.jpg",
     tabName: "Custom Web Design",
     title: "Transform Your Hotel’s Online Presence with a Custom Web Design",
     description:

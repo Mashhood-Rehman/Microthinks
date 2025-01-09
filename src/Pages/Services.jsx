@@ -31,14 +31,14 @@ export default function Services() {
       title: "Social Media Marketing",
       description:
         "It involves creating and sharing valuable content that resonates with your target audience.",
-      path: "/Services/SocialMediaMarketing",
+      path: "SocialMediaMarketing",
     },
     {
       icon: Home,
       title: "Property Management System",
       description:
         "We provide property management solutions to streamline operations and enhance your property's performance.",
-      path: "/Services/PropertyManagement",
+      path: "/PropertyManagementSystem",
     },
     {
       icon: DollarSign,
