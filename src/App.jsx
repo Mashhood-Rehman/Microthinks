@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/WebDesign" element={<WebDesign />} />
         <Route
           path="/Google Ads Management"
