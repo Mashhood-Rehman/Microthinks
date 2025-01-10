@@ -1,149 +1,187 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Code, Compass, Palette, Rocket, Shield, Zap } from "lucide-react";
 
-const GoogleAdsManagement = () => {
-  useEffect(() => {
-    // Scroll to top on component mount
-    window.scrollTo(0, 0);
-  }, []);
+const services = [
+  {
+    icon: <Palette className="w-8 h-8 " />,
+    title: "Campaign Creation and Management",
+    description:
+      "Transforming ideas into stunning visual experiences that captivate and engage your audience.",
+    features: [
+      "Brand-aligned aesthetics",
+      "Responsive layouts",
+      "Modern UI patterns",
+    ],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Code className="w-8 h-8 " />,
+    title: " Targeting and Audience Segmentation",
+    description:
+      "Building robust, scalable websites with cutting-edge technologies and best practices.",
+    features: ["Clean code", "Performance optimized", "SEO friendly"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Compass className="w-8 h-8 " />,
+    title: "Keyword and Bid Management",
+    description:
+      "Crafting intuitive user experiences that guide visitors effortlessly to their goals.",
+    features: ["User research", "Journey mapping", "Interaction design"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1553484771-047a44eee27f?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Shield className="w-8 h-8 " />,
+    title: "Ad Creation and Formats",
+    description:
+      "Keeping your digital presence secure, up-to-date, and performing at its best.",
+    features: ["Security updates", "Performance monitoring", "Content updates"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Zap className="w-8 h-8 " />,
+    title: "Performance Tracking and Analytics",
+    description:
+      "Optimizing every aspect of your website for lightning-fast performance.",
+    features: ["Speed optimization", "Core Web Vitals", "CDN integration"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Rocket className="w-8 h-8 " />,
+    title: "Advanced Features",
+    description:
+      "Implementing strategies that drive traffic, engagement, and conversions.",
+    features: ["SEO optimization", "Analytics", "Conversion optimization"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&q=80&w=2340",
+  },
+];
 
-  const features = [
-    {
-      icon: <span className="w-6 h-6 text-blue-500">🌐</span>,
-      title: "Global Reach",
-      description: "Connecting billions of people worldwide",
-    },
-    {
-      icon: <span className="w-6 h-6 text-red-500">👥</span>,
-      title: "Diverse Teams",
-      description: "Bringing together talent from all backgrounds",
-    },
-    {
-      icon: <span className="w-6 h-6 text-yellow-500">💡</span>,
-      title: "Innovation",
-      description: "Pushing the boundaries of technology",
-    },
-    {
-      icon: <span className="w-6 h-6 text-green-500">📈</span>,
-      title: "Sustainable Growth",
-      description: "Building for a better future",
-    },
-  ];
+function WebDesign() {
 
-  const stats = [
-    { value: "150+", label: "Countries Served" },
-    { value: "100K+", label: "Employees Worldwide" },
-    { value: "3.5B+", label: "Daily Searches" },
-    { value: "400+", label: "Products & Services" },
-  ];
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
+  const [activeService, setActiveService] = useState(services[0]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleServiceChange = (service) => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveService(service);
+      setIsTransitioning(false);
+    }, 300);
+  };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      {/* Header Section */}
-      <div className="container mx-auto px-4 pt-32 pb-16">
-        <div className="grid grid-cols-12 gap-8 items-center">
-          {/* Left Circle Image */}
-          <div className="col-span-12 md:col-span-3">
-            <div className="rounded-full overflow-hidden w-48 h-48 mx-auto relative">
-              <img
-                src="/public/HeroImage.webp"
-                alt="Team"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-
-          {/* Center Content */}
-          <div className="col-span-12 md:col-span-6 text-center">
-            <h1 className="text-5xl font-bold mb-8">Google Ads Management</h1>
-            <div className="flex items-center justify-center space-x-4 text-sm">
-              <a
-                href="/"
-                className="text-green-400 hover:text-green-300 transition-colors duration-300"
-              >
-                Home
-              </a>
-              <span className="text-gray-500">→</span>
-              <span>Services Details</span>
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="col-span-12 md:col-span-3">
-            <div className="rounded-2xl overflow-hidden h-48 relative">
-              <img
-                src="/public/Hotel1.webp"
-                alt="Office"
-                className="object-cover w-full h-auto"
-              />
-            </div>
-          </div>
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Hero Section */}
+      <div className="relative">
+        <div className="relative container mx-auto px-4 py-24">
+          <h1 className="text-6xl font-bold text-center mb-6">
+Google Ads Management
+          </h1>
+          <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto">
+          Microthinks offers a wide range of features to help businesses create, optimize, and manage their advertising campaigns effectively. 
+          </p>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16">
-        <div className="container mx-auto px-4">         
-          {/* About Content with Image */}
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl mb-16">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/2 relative aspect-video md:aspect-square">
+      {/* Services Showcase */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* Service Selection */}
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              {services.map((service, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleServiceChange(service)}
+                  className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300
+                    ${
+                      activeService.title === service.title
+                        ? "bg-orange-500 text-white"
+                        : "bg-[#1F2456] text-gray-300 hover:bg-gray-700"
+                    }`}
+                >
+                  <div className="relative z-10">
+                  <div
+                      className={`mb-4  ${
+                        activeService.title === service.title
+                          ? "  text-white "
+                          : "text-orange-500 "
+                      }`}
+                    >
+                      {service.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm line-clamp-2">
+                      {service.description}
+                    </p>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Service Details */}
+          <div
+            className={`transition-opacity duration-300 ${
+              isTransitioning ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            <div className="rounded-2xl overflow-hidden bg-[#1F2456]">
+              <div className="aspect-video relative overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Google Campus"
-                  className="rounded-xl object-cover w-full h-full"
+                  src={activeService.image}
+                  alt={activeService.title}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="w-full md:w-1/2">
-                <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                  Our Story
-                </h2>
-                <p className="text-gray-600 mb-4">
-                  Google was founded in 1998 by Larry Page and Sergey Brin while
-                  they were Ph.D. students at Stanford University. Together, they
-                  built one of the most influential companies globally.
+              <div className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`p-3 rounded-xl ${activeService.color}`}>
+                    {activeService.icon}
+                  </div>
+                  <h2 className="text-3xl font-bold">{activeService.title}</h2>
+                </div>
+                <p className="text-gray-300 text-lg mb-8">
+                  {activeService.description}
                 </p>
-                <p className="text-gray-600">
-                  Today, Google leads the development of products such as the
-                  Android OS, Google Chrome, and various hardware and AI
-                  innovations.
-                </p>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Key Features</h3>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {activeService.features.map((feature, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-orange-500"/>
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button className="mt-8 px-8 py-4 rounded-xl font-medium bg-orange-500 text-white hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-              >
-                <div className="mb-4 p-3 bg-gray-50 rounded-lg w-fit group-hover:bg-gray-100 transition-colors">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to Grow Your Business?
-          </h2>
-          <p className="mb-8 text-blue-100 max-w-2xl mx-auto">
-            Start reaching your target audience today with data-driven Google Ads campaigns
-          </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300 inline-flex items-center group">
-            Get Started
-            {/* < className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /> */}
-          </button>
-        </div>
-
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default GoogleAdsManagement;
+export default WebDesign;

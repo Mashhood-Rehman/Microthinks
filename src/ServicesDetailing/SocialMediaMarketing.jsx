@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 
 const SocialMediaMarketing = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   const services = [
     {
       title: "Social Media Strategy",
