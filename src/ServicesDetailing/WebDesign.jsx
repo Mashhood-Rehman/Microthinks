@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Code, Compass, Palette, Rocket, Shield, Zap } from "lucide-react";
 
 const services = [
@@ -69,6 +69,9 @@ const services = [
 ];
 
 function WebDesign() {
+   useEffect(()=>{
+      window.scrollTo(0,0)
+    },[])
   const [activeService, setActiveService] = useState(services[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
 

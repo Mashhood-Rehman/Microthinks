@@ -5,12 +5,11 @@ import Home from "./Pages/Home";
 import GoogleAdsManagement from "./ServicesDetailing/GoogleAdsManagement";
 import SocialMediaMarketing from "./ServicesDetailing/SocialMediaMarketing";
 import PropertyManagementSystem from "./ServicesDetailing/PropertyManagementSystem";
-import RevenueManagementSystem from "./ServicesDetailing/RevenueManagementSystem";
 import OTAListingManagement from "./ServicesDetailing/OTAListingManagement";
 import TermsandCondition from "./T&Cs/TermsandCondition";
 import PrivacyPolicy from "./T&Cs/PrivacyPolicy";
 import { Toaster } from "react-hot-toast";
-
+import RevenueManagementSystem from "./ServicesDetailing/RevenueManagementSystem"
 const App = () => {
   return (
     <div>
@@ -30,8 +29,7 @@ const App = () => {
           element={<PropertyManagementSystem />}
         />
         <Route
-          path="/RevenueManagementSystem
-"
+          path="/RevenueManagementSystem"
           element={<RevenueManagementSystem />}
         />
         <Route

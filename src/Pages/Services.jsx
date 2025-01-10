@@ -44,14 +44,14 @@ export default function Services() {
       title: "Revenue Management System",
       description:
         "Optimizes pricing strategies and inventory distribution to maximize a hotel's profitability by analyzing data and market demand.",
-      path: "/Services/RevenueManagement",
+      path: "/RevenueManagementSystem",
     },
     {
       icon: Search,
       title: "OTA Listing Management",
       description:
         "An OTA (Online Travel Agency) allows users to book travel services like flights, hotels, and car rentals online.",
-      path: "/Services/OTAManagement",
+      path: "/OTAListingManagement",
     },
   ];
 
