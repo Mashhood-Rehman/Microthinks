@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/WebDesign" element={<WebDesign />} />
         <Route
-          path="/Google Ads Management"
+          path="/GoogleAds"
           element={<GoogleAdsManagement />}
         />
         <Route
