@@ -1,152 +1,205 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import {BarChart,  Rocket,Edit3,PieChart,TrendingUp,MessageCircle} from "lucide-react";
 
-const SocialMediaMarketing = () => {
-  const services = [
-    {
-      title: "Social Media Strategy",
-      description:
-        "Our social media strategy services help businesses develop a tailored approach to grow their brand online. By understanding your audience and business goals, we create engaging content that drives brand awareness, increases followers, and boosts conversions across social platforms like Facebook, Instagram, Twitter, LinkedIn, and more. Our experts analyze current trends, monitor performance, and optimize strategies to achieve measurable results.",
-      image: "/public/social-media-strategy.jpg",
-    },
-    {
-      title: "Content Creation & Management",
-      description:
-        "We offer content creation and management services designed to attract, engage, and convert your target audience. Our team produces high-quality, relevant content for social media, including graphics, videos, blog posts, and infographics. We ensure your content is optimized for each platform, boosting engagement and driving traffic to your website. Regular management and posting help maintain an active presence and foster a connection with your followers.",
-      image: "/public/content-creation.jpg",
-    },
-    {
-      title: "Social Media Advertising",
-      description:
-        "Our social media advertising services help you reach a broader audience through targeted ads. We manage paid campaigns across platforms like Facebook Ads, Instagram Ads, LinkedIn Ads, and more, optimizing them for performance. Whether you're aiming for brand awareness, lead generation, or sales conversions, we create ads that speak to your audience and deliver measurable ROI.",
-      image: "/public/social-ads.jpg",
-    },
-    {
-      title: "Community Management",
-      description:
-        "Community management is essential for building relationships with your audience. Our services ensure that your social media communities are active, engaged, and loyal. We monitor interactions, respond to comments and messages, and foster positive conversations that align with your brand values, ensuring customer satisfaction and retention.",
-      image: "/public/community-management.jpg",
-    },
-    {
-      title: "Social Media Analytics & Reporting",
-      description:
-        "Tracking social media performance is key to understanding what works and what needs improvement. Our social media analytics and reporting services provide actionable insights into your campaigns. We track key performance indicators (KPIs), including engagement rates, traffic, and conversions, providing detailed reports and recommendations to enhance future strategies.",
-      image: "/public/social-analytics.jpg",
-    },
-    {
-      title: "Influencer Marketing",
-      description:
-        "Our influencer marketing services help connect your brand with influencers who align with your values and goals. By leveraging the trust and reach of influencers, we create authentic campaigns that resonate with your target audience. We handle everything from influencer research and outreach to campaign execution and performance tracking.",
-      image: "/public/influencer-marketing.jpg",
-    },
-  ];
+const services = [
+  {
+    icon: <PieChart className="w-8 h-8 " />,
+    title: "Strategy & Planning",
+    description:
+      "Developing thoughtful strategies and comprehensive plans to drive growth and ensure long-term success.",
+      features: [
+        "Goal Setting",
+        "Market Research",
+        "Actionable Plans",
+        "Targeting Insights",
+      ],
 
+    image:
+      "/Planing.webp",
+  },
+  {
+    icon: <Edit3 className="w-8 h-8 " />,
+    title: "Content Creation",
+    description:
+      "Crafting engaging, original content tailored to captivate your audience and elevate your brand’s voice.",
+      features: [
+        "Creative Writing",
+        "Visual Design",
+        "Brand Messaging",
+        "Engaging Media",
+      ],
+   
+    image:
+      "content.webp",
+      
+  },
+  {
+    icon: <TrendingUp className="w-8 h-8 " />,
+    title: "Paid Ads Campaigns",
+    description:
+      "Maximizing reach and ROI through targeted paid ad campaigns that drive results and boost visibility",
+      features: [
+        "Targeted Ads",
+        "Budget Optimization",
+        "ROI Tracking",
+        "Audience Reach",
+      ],
+      
+   
+    image:
+      "Ads.webp",
+  },
+  {
+    icon: <MessageCircle className="w-8 h-8 " />,
+    title: "Audience Engagement",
+    description:
+      "Building meaningful connections with your audience through interactive content and consistent, engaging communication.",
+      features: [
+        "Interactive Content",
+        "Community Building",
+        "Real-time Interaction",
+        "Brand Loyalty",
+      ],
+      
+   
+    image:
+      "AudienceEngagement.webp",
+  },
+  {
+    icon: <Rocket className="w-8 h-8 " />,
+    title: "Brand Growth Campaigns",
+    description:
+      "Designing impactful campaigns to enhance brand visibility, foster loyalty, and accelerate business growth.",
+      features: [
+        "Market Expansion",
+        "Customer Acquisition",
+        "Brand Awareness",
+        "Creative Campaigns",
+      ],
+      
+   
+    image:
+      "digital Marketing.webp",
+  },
+  {
+    
+    icon: <BarChart className="w-8 h-8" />,
+    title: "Analytics & Tracking",
+    description:
+      "Leveraging data-driven insights to track performance, optimize strategies, and drive measurable results for growth.",
+      features: [
+        "Data Insights",
+        "Performance Metrics",
+        "Conversion Tracking",
+        "Continuous Optimization",
+      ],
+      
+   
+    image:
+      "Analytics.webp",
+  },
+];
+
+function SocialMediaMarketing() {
   const [activeService, setActiveService] = useState(services[0]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Scroll to top when component mounts
-  useEffect(() => {
-    scrollTo(0, 0);
-  }, []);
+  const handleServiceChange = (service) => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveService(service);
+      setIsTransitioning(false);
+    }, 300);
+  };
 
   return (
-    <div className="min-h-80 bg-gray-900">
-      {/* SEO-friendly Meta Tags */}
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="description"
-          content="Social Media Marketing services to boost brand awareness, increase engagement, and drive conversions on all major social platforms."
-        />
-        <meta
-          name="keywords"
-          content="Social Media Marketing, Content Creation, Social Media Ads, Community Management, Influencer Marketing, Social Media Strategy"
-        />
-        <title>Social Media Marketing | Boost Your Brand Online</title>
-      </head>
-
-      {/* Main Content */}
-      <div className="container mx-auto px-4 pt-32 pb-16">
-        <div className="grid grid-cols-12 gap-8">
-          {/* Left Circle Image */}
-          <div className="col-span-12 md:col-span-3">
-            <div className="rounded-full overflow-hidden w-48 h-48 mx-auto relative">
-              <img
-                src="/public/HeroImage.webp"
-                alt="Social Media Marketing"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-
-          {/* Center Content */}
-          <div className="col-span-12 md:col-span-6 text-center">
-            <h1 className="text-5xl font-bold text-white mb-8">
-              Social Media Marketing
-            </h1>
-            <div className="flex items-center justify-center space-x-4 text-sm">
-              <a
-                href="/"
-                className="text-green-400 hover:text-green-300 transition-colors duration-300"
-              >
-                Home
-              </a>
-              <span className="text-gray-500">→</span>
-              <span className="text-white">Services Details</span>
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="col-span-12 md:col-span-3">
-            <div className="rounded-2xl overflow-hidden h-48 relative">
-              <img
-                src="/public/Hotel1.webp"
-                alt="Social Media"
-                className="object-contain w-full h-auto"
-              />
-            </div>
-          </div>
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Hero Section */}
+      <div className="relative">
+        <div className="relative container mx-auto px-4 py-24">
+          <h1 className="text-6xl font-bold text-center mb-6">
+            Digital Excellence
+          </h1>
+          <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto">
+            Crafting exceptional digital experiences through innovative design
+            and cutting-edge technology.
+          </p>
         </div>
       </div>
 
-      {/* Services Content */}
-      <div className="min-h-screen bg-gray-900 p-8">
-        <div className="container mx-auto grid grid-cols-12 gap-8">
-          {/* Titles Section (Left) */}
-          <div className="col-span-3">
-            <div className="space-y-4">
+      {/* Services Showcase */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* Service Selection */}
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
               {services.map((service, index) => (
                 <button
                   key={index}
-                  onClick={() => setActiveService(service)}
-                  className={`block w-full text-left px-4 py-2 rounded-md transition-colors duration-300 ${
-                    activeService.title === service.title
-                      ? "bg-blue-900 text-white"
-                      : "bg-gray-800 text-white hover:bg-gray-600"
-                  }`}
+                  onClick={() => handleServiceChange(service)}
+                  className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300
+                    ${
+                      activeService.title === service.title
+                        ? "bg-orange-500 text-white"
+                        : "bg-[#1F2456] text-gray-300 hover:bg-gray-700"
+                    }`}
                 >
-                  {service.title}
+                  <div className="relative z-10">
+                    <div className={`mb-4 ${activeService.title === service.title
+                      ? " text-white"
+                        : "text-orange-500"
+                    }`}>{service.icon}</div>
+                    
+                    <h3 className="text-lg font-semibold mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm line-clamp-2">
+                      {service.description}
+                    </p>
+                  </div>
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Content Section (Right) */}
-          <div className="col-span-9">
-            <div className="space-y-6">
-              {/* Image */}
-              <div className="rounded-lg h-auto object-cover overflow-hidden shadow-lg">
+          {/* Service Details */}
+          <div
+            className={`transition-opacity duration-300 ${
+              isTransitioning ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            <div className="rounded-2xl overflow-hidden bg-[#1F2456]">
+              <div className="aspect-video relative overflow-hidden">
                 <img
                   src={activeService.image}
                   alt={activeService.title}
-                  className="w-full h-[60vh]"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-
-              {/* Description and Button */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <p className="text-gray-300 mb-6">
+              <div className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`p-3 rounded-xl ${activeService.color}`}>
+                    {activeService.icon}
+                  </div>
+                  <h2 className="text-3xl font-bold">{activeService.title}</h2>
+                </div>
+                <p className="text-gray-300 text-lg mb-8">
                   {activeService.description}
                 </p>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Key Features</h3>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {activeService.features.map((feature, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-orange-500" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button className="mt-8 px-8 py-4 rounded-xl font-medium bg-orange-500 text-white hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
@@ -154,6 +207,6 @@ const SocialMediaMarketing = () => {
       </div>
     </div>
   );
-};
+}
 
 export default SocialMediaMarketing;
