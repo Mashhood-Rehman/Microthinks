@@ -6,6 +6,33 @@ import toast from "react-hot-toast";
 import emailjs from "emailjs-com";
 
 export default function Footer() {
+  const services = [
+    {
+      title: "Website Development",
+      path: "/WebDesign",
+    },
+    {
+      title: "Google Ads Campaigns",
+      path: "/GoogleAds",
+    },
+    {
+      title: "Property Management System",
+      path: "/PropertyManagementSystem",
+    },
+    {
+      title: "Revenue Management System",
+      path: "/Services/RevenueManagement",
+    },
+    {
+      title: "OTA Listing Management",
+      path: "/Services/OTAManagement",
+    },
+    {
+      title: "Social Media Marketing",
+      path: "/SocialMediaMarketing",
+    },
+  ];
+
   const [isClient, setIsClient] = useState(false);
   const [service, setService] = useState({ featured: false });
 
@@ -112,12 +139,17 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">Services</h3>
             <div className="space-y-2 text-sm text-gray-300">
-              <p>Website Development</p>
-              <p>Google Ads Campaigns</p>
-              <p>Property Management System</p>
-              <p className="mt-4">Revenue Management System</p>
-              <p className="mt-4">OTA Listing Management</p>
-              <p className="mt-4">Social Media Marketing</p>
+              {services.map((service, index) => (
+                <Link
+                  key={index}
+                  to={service.path}
+                  className={`block ${
+                    index >= 3 ? "mt-4" : ""
+                  } hover:text-gray-100 transition`}
+                >
+                  {service.title}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -131,15 +163,19 @@ export default function Footer() {
                 info@microthinks.com
               </Link>
               <Link
-                href="https://maps.app.goo.gl/tZvbk84Xks1YcW6G6"
+                target="_blank"
+                to="https://maps.app.goo.gl/tZvbk84Xks1YcW6G6"
                 className="block text-gray-300 hover:text-white"
               >
                 Lawrence Road, Near China Chowk, Lahore, Punjab, Pakistan
               </Link>
-              <Link to="#" className="block text-gray-300 hover:text-white">
+              <p className="block text-gray-300 hover:text-white">
                 Mon to Sat: 9am to 5pm
-              </Link>
-              <Link to="#" className="block text-gray-300 hover:text-white">
+              </p>
+              <Link
+                to="tel:+923064312116"
+                className="block text-gray-300 hover:text-white"
+              >
                 Call at: +92 306 4312116
               </Link>
             </nav>
@@ -148,16 +184,10 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">Need Help?</h3>
             <nav className="space-y-2 text-sm">
-              <Link to="#" className="block text-gray-300 hover:text-white">
-                Help Center
-              </Link>
-              <Link to="#" className="block text-gray-300 hover:text-white">
-                Support
-              </Link>
-              <Link to="#" className="block text-gray-300 hover:text-white">
-                Manage Booking
-              </Link>
-              <Link to="#" className="block text-gray-300 hover:text-white">
+              <Link
+                to="/Contact-page"
+                className="block text-gray-300 hover:text-white"
+              >
                 Contact Us
               </Link>
             </nav>
@@ -182,7 +212,6 @@ export default function Footer() {
                 className="w-full px-4 py-2 text-sm font-medium text-white bg-orange-600 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#001233]"
                 disabled={isSubmitting}
               >
-                {/* <PaperPlane className="mr-2 h-5 w-5" /> */}
                 {isSubmitting ? "Signing up..." : "Signup now"}
               </button>
             </form>
@@ -201,8 +230,6 @@ export default function Footer() {
               <Link to="/PrivacyPolicy" className="hover:text-white">
                 Privacy Policy
               </Link>
-
-              
             </div>
           </div>
         </div>
