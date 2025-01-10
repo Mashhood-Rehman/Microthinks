@@ -23,7 +23,7 @@ export default function Services() {
       title: "Google Ads Management",
       description:
         "Optimize your ad spend with expert Google Ads management for higher ROI and targeted traffic.",
-      path: "/Services/GoogleAds",
+      path: "/GoogleAds",
     },
     {
       icon: Speaker,
