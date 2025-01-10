@@ -4,7 +4,7 @@ import CircleLogo from "./CircleLogo";
 
 const HeroSection = () => {
   return (
-    <div id="" className="relative w-full h-screen mb-[100px]">
+    <div id="/" className="relative w-full h-screen mb-[100px]">
       <div
         className="absolute top-0 left-0 w-full h-full bg-fixed bg-center bg-cover custom-img"
         style={{ backgroundImage: "url('/HeroImage.webp')" }}

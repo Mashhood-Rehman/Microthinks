@@ -1,35 +1,46 @@
-import { useState, useEffect } from "react";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { useLocation, Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  const location = useLocation();
-
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const ScrollToTop = () => {
-    scroll.scrollToTop();
-  };
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const navbar = [
-    { name: "Home", id: "" },
+    { name: "Home", id: "/" },
     { name: "About", id: "about-us" },
     { name: "Services", id: "service" },
     { name: "OTA Platforms", id: "Ota-Platforms" },
     { name: "Contact", id: "Contact-page" },
   ];
 
-  const isHomePage = location.pathname === "/";
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleNavigation = (sectionId) => {
+    const isHomePage = location.pathname === "/";
+
+    if (isHomePage) {
+      scrollToSection(sectionId);
+    } else {
+      navigate("/#" + sectionId);
+    }
+  };
 
   return (
     <nav
@@ -44,7 +55,7 @@ export default function Navbar() {
           {/* Logo */}
           <div style={{ width: "100px", height: "50px" }}>
             <img
-              onClick={ScrollToTop}
+              onClick={() => handleNavigation("")}
               src="/Assets1.png"
               className="w-full h-auto cursor-pointer"
               alt="MicroThink logo image"
@@ -55,86 +66,46 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {navbar.map((item) =>
-              isHomePage ? (
-                <ScrollLink
-                  key={item.name}
-                  to={item.id}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  className="cursor-pointer hover:text-orange-500 transition-colors"
-                >
-                  {item.name}
-                </ScrollLink>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={`/${item.id}`}
-                  className="cursor-pointer hover:text-orange-500 transition-colors"
-                >
-                  {item.name}
-                </Link>
-              )
-            )}
+            {navbar.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => handleNavigation(item.id)}
+                className="cursor-pointer hover:text-orange-500 transition-colors"
+              >
+                {item.name}
+              </button>
+            ))}
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             aria-label="Toggle mobile menu"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? "✕" : "☰"}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden flex flex-col space-y-4 bg-white p-4">
-            {navbar.map((item) =>
-              isHomePage ? (
-                <ScrollLink
-                  key={item.name}
-                  to={item.id}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  className="cursor-pointer text-center text-gray-700 hover:text-orange-500 transition-colors"
-                >
-                  {item.name}
-                </ScrollLink>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={`/${item.id}`}
-                  className="cursor-pointer text-center text-gray-700 hover:text-orange-500 transition-colors"
-                >
-                  {item.name}
-                </Link>
-              )
-            )}
+            {navbar.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => handleNavigation(item.id)}
+                className="cursor-pointer text-center text-gray-700 hover:text-orange-500 transition-colors"
+              >
+                {item.name}
+              </button>
+            ))}
 
-            {isHomePage ? (
-              <ScrollLink
-                to="Contact-page"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="bg-orange-500 hover:bg-orange-600 text-white rounded-lg w-full text-center py-2"
-              >
-                Get Started
-              </ScrollLink>
-            ) : (
-              <Link
-                to="/Contact"
-                className="bg-orange-500 hover:bg-orange-600 text-white rounded-lg w-full text-center py-2"
-              >
-                Get Started
-              </Link>
-            )}
+            <button
+              onClick={() => handleNavigation("Contact-page")}
+              className="bg-orange-500 hover:bg-orange-600 text-white rounded-lg w-full text-center py-2"
+            >
+              Get Started
+            </button>
           </div>
         )}
       </div>
