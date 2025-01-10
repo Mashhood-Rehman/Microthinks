@@ -1,135 +1,169 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Code, Compass, Palette, Rocket, Shield, Zap } from "lucide-react";
 
-const WebDesign = () => {
-  const services = [
-    {
-      title: "Custom Website Design",
-      description:
-        "Designing unique and visually appealing websites tailored to a client’s brand involves creating a site that reflects their identity and meets their goals. This includes understanding their brand's colors, typography, and overall tone, as well as considering their target audience and purpose, such as selling products or showcasing services. The process starts with planning the site structure and designing layouts that are easy to navigate, visually striking, and responsive across all devices. Elements like high-quality images, custom graphics, consistent branding, and engaging features such as sliders or animations help make the website stand out. The focus is on creating a user-friendly experience while ensuring accessibility for all users. Finally, testing and feedback ensure the design aligns perfectly with the client’s vision and business objectives.",
-      image: "/public/wpp.jpg",
-    },
-    {
-      title: "UI/UX Design",
-      description:
-        "UI/UX design focuses on creating intuitive, visually appealing, and user-friendly digital experiences. User Interface (UI) design emphasizes the look and feel of a product, including colors, typography, buttons, and layout, ensuring it is visually cohesive and attractive. On the other hand, User Experience (UX) design is about usability and functionality, ensuring that the product is easy to navigate, meets user needs, and provides a seamless experience. Together, UI/UX design involves understanding the target audience, planning the user journey, and designing interfaces that are not only beautiful but also practical and engaging. The ultimate goal is to make digital interactions enjoyable and efficient for users, aligning with both their expectations and business objectives.",
-      image: "/public/boy.jpg",
-    },
-    {
-      title: "CMS",
-      description:
-        "We specialize in WordPress, a powerful and user-friendly Content Management System (CMS) designed to create and manage professional websites effortlessly. WordPress provides a wide range of customizable themes and plugins, making it ideal for blogs, portfolios, business websites, or informational platforms. Our expertise ensures that your WordPress site is visually appealing, responsive, and optimized for performance. Whether you’re looking to showcase your brand, share content, or build a professional online presence, we tailor WordPress solutions to align perfectly with your goals.",
-      image: "/path-to-image/digital-marketing.jpg",
-    },
-    {
-      title: "Website Maintenance Services",
-      description:
-        "Website maintenance services ensure that your website remains functional, secure, and up-to-date. These services include regular updates to the website’s software, plugins, and themes, as well as monitoring for potential issues like broken links or downtime. Maintenance also involves optimizing website performance, improving loading speeds, and ensuring compatibility across devices and browsers. Security measures, such as backups and protection against malware or hacking attempts, are also a critical part of maintenance. By keeping your website fresh, secure, and fully operational, website maintenance helps provide a seamless experience for users and supports your business goals.",
-      image: "/path-to-image/digital-marketing.jpg",
-    },
-    {
-      title: "Web Content",
-      description:
-        "Website content services focus on creating, managing, and optimizing the text, images, and multimedia that make up your website. These services ensure your content is engaging, informative, and aligned with your brand's voice and goals. From crafting compelling headlines and blog posts to writing clear and concise service descriptions, website content services help communicate your message effectively. They also include SEO optimization, ensuring your content ranks well on search engines and attracts the right audience. By delivering high-quality, audience-focused content, these services enhance user engagement, build credibility, and support your website's overall success.",
-      image: "/path-to-image/digital-marketing.jpg",
-    },
-    {
-      title: "SEO-Optimized Web Design",
-      description:
-        "Our SEO-optimized website design services focus on creating visually appealing websites that are built to perform well on search engines. We design user-friendly layouts that not only reflect your brand but also enhance navigation and user experience. By integrating SEO best practices into the design process, such as fast-loading pages, mobile responsiveness, clean coding, and proper meta-tagging, we ensure your website ranks higher on search engine results. With attention to keyword placement and structured content, our designs attract organic traffic, improve visibility, and help your business stand out in a competitive digital landscape.",
-      image: "/path-to-image/digital-marketing.jpg",
-    },
-  ];
+const services = [
+  {
+    icon: <Palette className="w-8 h-8 text-orange-500" />,
+    title: "Creative Design",
+    description:
+      "Transforming ideas into stunning visual experiences that captivate and engage your audience.",
+    features: [
+      "Brand-aligned aesthetics",
+      "Responsive layouts",
+      "Modern UI patterns",
+    ],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Code className="w-8 h-8 text-orange-500" />,
+    title: "Development",
+    description:
+      "Building robust, scalable websites with cutting-edge technologies and best practices.",
+    features: ["Clean code", "Performance optimized", "SEO friendly"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Compass className="w-8 h-8 text-orange-500" />,
+    title: "UX Strategy",
+    description:
+      "Crafting intuitive user experiences that guide visitors effortlessly to their goals.",
+    features: ["User research", "Journey mapping", "Interaction design"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1553484771-047a44eee27f?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Shield className="w-8 h-8 text-orange-500" />,
+    title: "Maintenance",
+    description:
+      "Keeping your digital presence secure, up-to-date, and performing at its best.",
+    features: ["Security updates", "Performance monitoring", "Content updates"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Zap className="w-8 h-8 text-orange-500" />,
+    title: "Performance",
+    description:
+      "Optimizing every aspect of your website for lightning-fast performance.",
+    features: ["Speed optimization", "Core Web Vitals", "CDN integration"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Rocket className="w-8 h-8 text-orange-500" />,
+    title: "Growth",
+    description:
+      "Implementing strategies that drive traffic, engagement, and conversions.",
+    features: ["SEO optimization", "Analytics", "Conversion optimization"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&q=80&w=2340",
+  },
+];
+
+function WebDesign() {
   const [activeService, setActiveService] = useState(services[0]);
-  useEffect(() => {
-    scrollTo(0, 0);
-  }, []);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleServiceChange = (service) => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveService(service);
+      setIsTransitioning(false);
+    }, 300);
+  };
+
   return (
-    <div className="min-h-80 bg-gray-900">
-      {/* Navigation Badge */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2"></div>
-
-      {/* Main Content */}
-      <div className="container mx-auto px-4 pt-32 pb-16">
-        <div className="grid grid-cols-12 gap-8">
-          {/* Left Circle Image */}
-          <div className="col-span-12 md:col-span-3">
-            <div className="rounded-full overflow-hidden w-48 h-48 mx-auto relative">
-              <img
-                src="/public/HeroImage.webp"
-                alt="Team"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-
-          {/* Center Content */}
-          <div className="col-span-12 md:col-span-6 text-center">
-            <h1 className="text-5xl font-bold text-white mb-8">
-              Website Design
-            </h1>
-            <div className="flex items-center justify-center space-x-4 text-sm">
-              <a
-                href="/"
-                className="text-green-400 hover:text-green-300 transition-colors duration-300"
-              >
-                Home
-              </a>
-              <span className="text-gray-500">→</span>
-              <span className="text-white">Services Details</span>
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="col-span-12 md:col-span-3">
-            <div className="rounded-2xl overflow-hidden h-48 relative">
-              <img
-                src="/public/Hotel1.webp"
-                alt="Office"
-                className="object-contain w-full h-auto"
-              />
-            </div>
-          </div>
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Hero Section */}
+      <div className="relative">
+        <div className="relative container mx-auto px-4 py-24">
+          <h1 className="text-6xl font-bold text-center mb-6">
+            Digital Excellence
+          </h1>
+          <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto">
+            Crafting exceptional digital experiences through innovative design
+            and cutting-edge technology.
+          </p>
         </div>
       </div>
-      {/* Render Webdes Component */}
-      <div className="min-h-screen bg-gray-900 p-8">
-        <div className="container mx-auto grid grid-cols-12 gap-8">
-          {/* Titles Section (Left) */}
-          <div className="col-span-3">
-            <div className="space-y-4">
+
+      {/* Services Showcase */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* Service Selection */}
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
               {services.map((service, index) => (
                 <button
                   key={index}
-                  onClick={() => setActiveService(service)}
-                  className={`block w-full text-left px-4 py-2 rounded-md transition-colors duration-300 ${
-                    activeService.title === service.title
-                      ? "bg-blue-900 text-white"
-                      : "bg-gray-800 text-white hover:bg-gray-600"
-                  }`}
+                  onClick={() => handleServiceChange(service)}
+                  className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300
+                    ${
+                      activeService.title === service.title
+                        ? "bg-orange-500 text-white"
+                        : "bg-[#1F2456] text-gray-300 hover:bg-gray-700"
+                    }`}
                 >
-                  {service.title}
+                  <div className="relative z-10">
+                    <div className="mb-4">{service.icon}</div>
+                    <h3 className="text-lg font-semibold mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm line-clamp-2">
+                      {service.description}
+                    </p>
+                  </div>
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Content Section (Right) */}
-          <div className="col-span-9">
-            <div className="space-y-6">
-              {/* Image */}
-              <div className="rounded-lg h-auto object-cover overflow-hidden shadow-lg">
+          {/* Service Details */}
+          <div
+            className={`transition-opacity duration-300 ${
+              isTransitioning ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            <div className="rounded-2xl overflow-hidden bg-[#1F2456]">
+              <div className="aspect-video relative overflow-hidden">
                 <img
                   src={activeService.image}
                   alt={activeService.title}
-                  className="w- h-[60vh]"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-
-              {/* Description and Button */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <p className="text-gray-300 mb-6">
+              <div className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`p-3 rounded-xl ${activeService.color}`}>
+                    {activeService.icon}
+                  </div>
+                  <h2 className="text-3xl font-bold">{activeService.title}</h2>
+                </div>
+                <p className="text-gray-300 text-lg mb-8">
                   {activeService.description}
                 </p>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Key Features</h3>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {activeService.features.map((feature, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-orange-500" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button className="mt-8 px-8 py-4 rounded-xl font-medium bg-orange-500 text-white hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
@@ -137,6 +171,6 @@ const WebDesign = () => {
       </div>
     </div>
   );
-};
+}
 
 export default WebDesign;
