@@ -42,14 +42,12 @@ const PropertyManagementSystem = () => {
 
   const [activeService, setActiveService] = useState(services[0]);
 
-  // Scroll to top when component mounts
   useEffect(() => {
     scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-80 bg-gray-900">
-      {/* SEO-friendly Meta Tags */}
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -66,10 +64,8 @@ const PropertyManagementSystem = () => {
         </title>
       </head>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 pt-32 pb-16">
         <div className="grid grid-cols-12 gap-8">
-          {/* Left Circle Image */}
           <div className="col-span-12 md:col-span-3">
             <div className="rounded-full overflow-hidden w-48 h-48 mx-auto relative">
               <img
@@ -80,7 +76,6 @@ const PropertyManagementSystem = () => {
             </div>
           </div>
 
-          {/* Center Content */}
           <div className="col-span-12 md:col-span-6 text-center">
             <h1 className="text-5xl font-bold text-white mb-8">
               Property Management System
@@ -97,7 +92,6 @@ const PropertyManagementSystem = () => {
             </div>
           </div>
 
-          {/* Right Image */}
           <div className="col-span-12 md:col-span-3">
             <div className="rounded-2xl overflow-hidden h-48 relative">
               <img
@@ -110,10 +104,8 @@ const PropertyManagementSystem = () => {
         </div>
       </div>
 
-      {/* Services Content */}
       <div className="min-h-screen bg-gray-900 p-8">
         <div className="container mx-auto grid grid-cols-12 gap-8">
-          {/* Titles Section (Left) */}
           <div className="col-span-3">
             <div className="space-y-4">
               {services.map((service, index) => (
@@ -132,10 +124,8 @@ const PropertyManagementSystem = () => {
             </div>
           </div>
 
-          {/* Content Section (Right) */}
           <div className="col-span-9">
             <div className="space-y-6">
-              {/* Image */}
               <div className="rounded-lg h-auto object-cover overflow-hidden shadow-lg">
                 <img
                   src={activeService.image}
@@ -144,7 +134,6 @@ const PropertyManagementSystem = () => {
                 />
               </div>
 
-              {/* Description and Button */}
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <p className="text-gray-300 mb-6">
                   {activeService.description}
