@@ -3,7 +3,7 @@ import { Code, Compass, Palette, Rocket, Shield, Zap } from "lucide-react";
 
 const services = [
   {
-    icon: <Palette className="w-8 h-8 text-orange-500" />,
+    icon: <Palette className="w-8 h-8 " />,
     title: "Creative Design",
     description:
       "Transforming ideas into stunning visual experiences that captivate and engage your audience.",
@@ -17,7 +17,7 @@ const services = [
       "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=2340",
   },
   {
-    icon: <Code className="w-8 h-8 text-orange-500" />,
+    icon: <Code className="w-8 h-8 " />,
     title: "Development",
     description:
       "Building robust, scalable websites with cutting-edge technologies and best practices.",
@@ -27,7 +27,7 @@ const services = [
       "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=2340",
   },
   {
-    icon: <Compass className="w-8 h-8 text-orange-500" />,
+    icon: <Compass className="w-8 h-8 " />,
     title: "UX Strategy",
     description:
       "Crafting intuitive user experiences that guide visitors effortlessly to their goals.",
@@ -37,7 +37,7 @@ const services = [
       "https://images.unsplash.com/photo-1553484771-047a44eee27f?auto=format&fit=crop&q=80&w=2340",
   },
   {
-    icon: <Shield className="w-8 h-8 text-orange-500" />,
+    icon: <Shield className="w-8 h-8 " />,
     title: "Maintenance",
     description:
       "Keeping your digital presence secure, up-to-date, and performing at its best.",
@@ -47,7 +47,7 @@ const services = [
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2340",
   },
   {
-    icon: <Zap className="w-8 h-8 text-orange-500" />,
+    icon: <Zap className="w-8 h-8 " />,
     title: "Performance",
     description:
       "Optimizing every aspect of your website for lightning-fast performance.",
@@ -57,7 +57,7 @@ const services = [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2340",
   },
   {
-    icon: <Rocket className="w-8 h-8 text-orange-500" />,
+    icon: <Rocket className="w-8 h-8 " />,
     title: "Growth",
     description:
       "Implementing strategies that drive traffic, engagement, and conversions.",
@@ -113,7 +113,15 @@ function WebDesign() {
                     }`}
                 >
                   <div className="relative z-10">
-                    <div className="mb-4">{service.icon}</div>
+                    <div
+                      className={`mb-4  ${
+                        activeService.title === service.title
+                          ? "  text-white "
+                          : "text-orange-500 "
+                      }`}
+                    >
+                      {service.icon}
+                    </div>
                     <h3 className="text-lg font-semibold mb-2">
                       {service.title}
                     </h3>
@@ -142,9 +150,9 @@ function WebDesign() {
               </div>
               <div className="p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`p-3 rounded-xl ${activeService.color}`}>
+                  {/* <div className={`p-3 rounded-xl ${activeService.color}`}>
                     {activeService.icon}
-                  </div>
+                  </div> */}
                   <h2 className="text-3xl font-bold">{activeService.title}</h2>
                 </div>
                 <p className="text-gray-300 text-lg mb-8">
