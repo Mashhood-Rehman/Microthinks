@@ -65,10 +65,10 @@ export default function Services() {
 
       <div className="relative container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold font-serif text-white mb-4">
+          <h2 className="text-4xl font-bold  text-white mb-4">
             Service We Provide
           </h2>
-          <p className="text-gray-300 font-serif max-w-2xl mx-auto">
+          <p className="text-gray-300  max-w-2xl mx-auto">
             Transform your space with our comprehensive range of professional
             services, delivered with expertise and attention to detail.
           </p>
@@ -78,7 +78,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`rounded-lg shadow-lg overflow-hidden transition-transform duration-300 font-serif hover:-translate-y-1 ${
+              className={`rounded-lg shadow-lg overflow-hidden transition-transform duration-300  hover:-translate-y-1 ${
                 service.featured ? "bg-[#1F2456] text-white" : "bg-white"
               }`}
             >
@@ -91,7 +91,7 @@ export default function Services() {
                   />
                 </div>
                 <h3
-                  className={`text-xl font-semibold font-serif mb-3 ${
+                  className={`text-xl font-semibold  mb-3 ${
                     service.featured ? "text-white" : "text-blue-900"
                   }`}
                 >
@@ -100,7 +100,7 @@ export default function Services() {
                 <p
                   className={
                     service.featured
-                      ? "text-white/90 font-serif"
+                      ? "text-white/90 "
                       : "text-gray-600"
                   }
                 >

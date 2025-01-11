@@ -178,7 +178,7 @@ function SocialMediaMarketing() {
               </div>
               <div className="p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={p-3 rounded-xl ${activeService.color}}>
+                  <div className={`p-3 rounded-xl ${activeService.color}`}>
                     {activeService.icon}
                   </div>
                   <h2 className="text-3xl font-bold">{activeService.title}</h2>
