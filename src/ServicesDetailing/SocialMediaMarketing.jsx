@@ -141,6 +141,6 @@ const SocialMediaMarketing = () => {
       </div>
     </div>
   );
-};
+}
 
 export default SocialMediaMarketing;
