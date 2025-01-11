@@ -14,11 +14,11 @@ const HeroSection = () => {
 
       <div className="relative z-10 ml-16 flex justify-start items-center h-full text-left text-white px-10">
         <div className="max-w-md">
-          <h1 className="mb-5  text-4xl  font-semibold font-serif tracking-tight lg:text-5xl">
+          <h1 className="mb-5  text-xl    font-semibold font-serif tracking-tight lg:text-5xl">
             Grow your Hotels with our Marketing
             <span className="text-orange-500"> Services</span>
           </h1>
-          <p className="mb-5 scroll-m-20 text-md  font-serif tracking-tight">
+          <p className="mb-5 scroll-m-20 text-sm  font-serif tracking-tight">
             We elevate your hotel&apos;s online presence with customized
             solutions to enrich guest&apos;s experiences.
           </p>

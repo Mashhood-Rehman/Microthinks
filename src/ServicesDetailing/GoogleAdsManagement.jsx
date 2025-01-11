@@ -69,10 +69,9 @@ const services = [
 ];
 
 function WebDesign() {
-
-  useEffect(()=>{
-    window.scrollTo(0,0)
-  },[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [activeService, setActiveService] = useState(services[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -89,11 +88,13 @@ function WebDesign() {
       {/* Hero Section */}
       <div className="relative">
         <div className="relative container mx-auto px-4 py-24">
-          <h1 className="text-6xl font-bold text-center mb-6">
-Google Ads Management
+          <h1 className="lg:text-6xl text-xl font-bold text-center mb-6">
+            Google Ads Management
           </h1>
-          <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto">
-          Microthinks offers a wide range of features to help businesses create, optimize, and manage their advertising campaigns effectively. 
+          <p className="lg:text-xl text-md text-center text-gray-300 max-w-2xl mx-auto">
+            Microthinks offers a wide range of features to help businesses
+            create, optimize, and manage their advertising campaigns
+            effectively.
           </p>
         </div>
       </div>
@@ -116,7 +117,7 @@ Google Ads Management
                     }`}
                 >
                   <div className="relative z-10">
-                  <div
+                    <div
                       className={`mb-4  ${
                         activeService.title === service.title
                           ? "  text-white "
@@ -166,7 +167,7 @@ Google Ads Management
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {activeService.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-orange-500"/>
+                        <div className="w-2 h-2 rounded-full bg-orange-500" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}

@@ -112,10 +112,10 @@ function SocialMediaMarketing() {
       {/* Hero Section */}
       <div className="relative">
         <div className="relative container mx-auto px-4 py-24">
-          <h1 className="text-6xl font-bold text-center mb-6">
+          <h1 className="lg:text-6xl text-xl  font-bold text-center mb-6">
             Digital Excellence
           </h1>
-          <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto">
+          <p className="lg:text-xl text-md text-center text-gray-300 max-w-2xl mx-auto">
             Crafting exceptional digital experiences through innovative design
             and cutting-edge technology.
           </p>
