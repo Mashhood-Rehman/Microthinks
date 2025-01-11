@@ -89,8 +89,7 @@ function WebDesign() {
       <div className="relative">
         <div className="relative container mx-auto px-4 py-24">
           <h1 className="text-6xl font-bold text-center mb-6">
-            Digital Excellence
-          </h1>
+Website Design          </h1>
           <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto">
             Crafting exceptional digital experiences through innovative design
             and cutting-edge technology.
