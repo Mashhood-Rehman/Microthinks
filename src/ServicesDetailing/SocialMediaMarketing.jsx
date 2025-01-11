@@ -121,7 +121,6 @@ const SocialMediaMarketing = () => {
             </div>
           </div>
 
-          {/* CTA Section */}
           <div className="bg-gray-900 rounded-2xl p-12 text-white text-center transform hover:scale-[1.02] transition-transform duration-300">
             <div className="max-w-3xl mx-auto space-y-8">
               <h2 className="text-4xl font-bold mb-4">
