@@ -1,156 +1,140 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const SocialMediaMarketing = () => {
-  useEffect(()=>{
-    window.scrollTo(0,0)
-  },[])
-  const services = [
-    {
-      title: "Social Media Strategy",
-      description:
-        "Our social media strategy services help businesses develop a tailored approach to grow their brand online. By understanding your audience and business goals, we create engaging content that drives brand awareness, increases followers, and boosts conversions across social platforms like Facebook, Instagram, Twitter, LinkedIn, and more. Our experts analyze current trends, monitor performance, and optimize strategies to achieve measurable results.",
-      image: "/public/social-media-strategy.jpg",
-    },
-    {
-      title: "Content Creation & Management",
-      description:
-        "We offer content creation and management services designed to attract, engage, and convert your target audience. Our team produces high-quality, relevant content for social media, including graphics, videos, blog posts, and infographics. We ensure your content is optimized for each platform, boosting engagement and driving traffic to your website. Regular management and posting help maintain an active presence and foster a connection with your followers.",
-      image: "/public/content-creation.jpg",
-    },
-    {
-      title: "Social Media Advertising",
-      description:
-        "Our social media advertising services help you reach a broader audience through targeted ads. We manage paid campaigns across platforms like Facebook Ads, Instagram Ads, LinkedIn Ads, and more, optimizing them for performance. Whether you're aiming for brand awareness, lead generation, or sales conversions, we create ads that speak to your audience and deliver measurable ROI.",
-      image: "/public/social-ads.jpg",
-    },
-    {
-      title: "Community Management",
-      description:
-        "Community management is essential for building relationships with your audience. Our services ensure that your social media communities are active, engaged, and loyal. We monitor interactions, respond to comments and messages, and foster positive conversations that align with your brand values, ensuring customer satisfaction and retention.",
-      image: "/public/community-management.jpg",
-    },
-    {
-      title: "Social Media Analytics & Reporting",
-      description:
-        "Tracking social media performance is key to understanding what works and what needs improvement. Our social media analytics and reporting services provide actionable insights into your campaigns. We track key performance indicators (KPIs), including engagement rates, traffic, and conversions, providing detailed reports and recommendations to enhance future strategies.",
-      image: "/public/social-analytics.jpg",
-    },
-    {
-      title: "Influencer Marketing",
-      description:
-        "Our influencer marketing services help connect your brand with influencers who align with your values and goals. By leveraging the trust and reach of influencers, we create authentic campaigns that resonate with your target audience. We handle everything from influencer research and outreach to campaign execution and performance tracking.",
-      image: "/public/influencer-marketing.jpg",
-    },
-  ];
-
-  const [activeService, setActiveService] = useState(services[0]);
-
-  // Scroll to top when component mounts
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
+  const workProcessSteps = [
+    {
+      step: "01",
+      title: "Strategic Planning",
+      description: "We analyze your business goals, target audience, and competitors to develop a data-driven social media marketing strategy tailored to your objectives. This ensures your brand reaches the right audience with impactful and engaging content."
+    },
+    {
+      step: "02",
+      title: "Campaign Setup",
+      description: "Our experts set up your social media campaigns with precise audience targeting, engaging content, and proper tracking to ensure optimal performance and measurable results."
+    },
+    {
+      step: "03",
+      title: "Optimization & Testing",
+      description: "We conduct continuous A/B testing, audience refinement, and performance optimization to maximize your social media campaign's engagement, reach, and ROI."
+    },
+    {
+      step: "04",
+      title: "Analysis & Scaling",
+      description: "We regularly analyze campaign performance and strategically scale successful social media campaigns to enhance engagement and expand your brand’s market presence."
+    }
+  ];
+
   return (
-    <div className="min-h-80 bg-gray-900">
-      {/* SEO-friendly Meta Tags */}
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="description"
-          content="Social Media Marketing services to boost brand awareness, increase engagement, and drive conversions on all major social platforms."
-        />
-        <meta
-          name="keywords"
-          content="Social Media Marketing, Content Creation, Social Media Ads, Community Management, Influencer Marketing, Social Media Strategy"
-        />
-        <title>Social Media Marketing | Boost Your Brand Online</title>
-      </head>
-
-      {/* Main Content */}
-      <div className="container mx-auto px-4 pt-32 pb-16">
-        <div className="grid grid-cols-12 gap-8">
-          {/* Left Circle Image */}
-          <div className="col-span-12 md:col-span-3">
-            <div className="rounded-full overflow-hidden w-48 h-48 mx-auto relative">
-              <img
-                src="/public/HeroImage.webp"
-                alt="Social Media Marketing"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-
-          {/* Center Content */}
+    <div className="min-h-screen bg-gray-900 text-white">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 pt-32 pb-16 h-[70vh]">
+        <div className=" gap-8 items-center ">
           <div className="col-span-12 md:col-span-6 text-center">
-            <h1 className="text-5xl font-bold text-white mb-8">
+            <div className="space-y-6">
+              <h1 className="text-5xl font-bold mb-8">
               Social Media Marketing
-            </h1>
-            <div className="flex items-center justify-center space-x-4 text-sm">
-              <a
-                href="/"
-                className="text-green-400 hover:text-green-300 transition-colors duration-300"
-              >
-                Home
-              </a>
-              <span className="text-gray-500">→</span>
-              <span className="text-white">Services Details</span>
+              </h1>
+              <div className="flex items-center justify-center space-x-4 text-sm">
+                <a href="/" className="text-orange-400 hover:text-orange-300 transition-colors duration-300">
+                  Home
+                </a>
+                <span className="text-gray-500">→</span>
+                <span className="text-white">Services Details</span>
+              </div>
             </div>
           </div>
-
-          {/* Right Image */}
-          <div className="col-span-12 md:col-span-3">
-            <div className="rounded-2xl overflow-hidden h-48 relative">
-              <img
-                src="/public/Hotel1.webp"
-                alt="Social Media"
-                className="object-contain w-full h-auto"
+          {/* <div className="col-span-12 md:col-span-3">
+          <img
+                src="/public/gads.svg"
+                alt="Team"
               />
+            <div className="rounded-2xl overflow-hidden h-48 relative group">
+              <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
-      {/* Services Content */}
-      <div className="min-h-screen bg-gray-900 p-8">
-        <div className="container mx-auto grid grid-cols-12 gap-8">
-          {/* Titles Section (Left) */}
-          <div className="col-span-3">
-            <div className="space-y-4">
-              {services.map((service, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveService(service)}
-                  className={`block w-full text-left px-4 py-2 rounded-md transition-colors duration-300 ${
-                    activeService.title === service.title
-                      ? "bg-blue-900 text-white"
-                      : "bg-gray-800 text-white hover:bg-gray-600"
-                  }`}
-                >
-                  {service.title}
-                </button>
+      {/* Main Content */}
+      <div className="min-h-screen bg-white py-16">
+        <div className="container mx-auto px-4">         
+          {/* About Section */}
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-xl mb-12 hover:shadow-2xl transition-shadow duration-300">
+            <div className="flex flex-col md:flex-row  gap-8">
+              <div className="w-full md:w-1/2">
+             
+                <img
+                  src="/public/socialmedia.png"
+                  alt="Google Ads Management"
+                  className="rounded-xl object-cover w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="w-full md:w-1/2 space-y-6">
+                <h2 className="text-4xl font-bold text-gray-900">
+                Our Approach to Social Media Marketing
+                </h2>
+                <div className="space-y-4">
+                  <p className="text-gray-600 leading-relaxe">
+                  We combine innovative strategies with years of expertise to deliver social media campaigns that achieve outstanding results. Through detailed audience research, content planning, and platform-specific strategies, we maximize ROI by ensuring your brand connects with the right audience and drives measurable engagement. From crafting compelling posts to optimizing campaigns for reach and performance, we manage every aspect of your social media marketing with precision. Our commitment to continuous improvement ensures your campaigns consistently perform at their best, 
+                  helping you grow your audience, increase engagement, and achieve your business goals effectively.</p>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Work Process Section */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+              Our Work Process
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {workProcessSteps.map((step, index) => (
+                <div key={index} className="relative group">
+                  {/* Connection Line */}
+                  {index < workProcessSteps.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/4 right-0 w-full h-0.5 bg-gray-200 transform translate-x-1/2">
+                      <div className="absolute right-0 w-3 h-3 bg-gray-200 transform rotate-45 -translate-y-1/2"></div>
+                    </div>
+                  )}
+                  
+                  {/* Card Content */}
+                  <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative z-10 h-full group">
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="w-16 h-16 bg-orange-500 text-white flex items-center justify-center text-2xl font-bold rounded-lg group-hover:scale-110 transition-transform duration-300">
+                        {step.step}
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Content Section (Right) */}
-          <div className="col-span-9">
-            <div className="space-y-6">
-              {/* Image */}
-              <div className="rounded-lg h-auto object-cover overflow-hidden shadow-lg">
-                <img
-                  src={activeService.image}
-                  alt={activeService.title}
-                  className="w-full h-[60vh]"
-                />
-              </div>
+          {/* CTA Section */}
+          <div className="bg-gray-900 rounded-2xl p-12 text-white text-center transform hover:scale-[1.02] transition-transform duration-300">
+            <div className="max-w-3xl mx-auto space-y-8">
+              <h2 className="text-4xl font-bold mb-4">
+                Ready to Transform Your Social Media?
+              </h2>
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Let our experts create and manage high-performing social media marketing campaigns that deliver exceptional results and drive growth for your business
 
-              {/* Description and Button */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <p className="text-gray-300 mb-6">
-                  {activeService.description}
-                </p>
-              </div>
+</p>
+              <button className="bg-orange-500 text-white px-10 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-colors duration-300 inline-flex items-center group shadow-lg hover:shadow-xl">
+                <span>Start Your Campaign</span>
+                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+              </button>
             </div>
           </div>
         </div>
