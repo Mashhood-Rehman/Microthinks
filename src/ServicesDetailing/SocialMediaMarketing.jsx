@@ -1,5 +1,12 @@
 import { useState } from "react";
-import {BarChart,  Rocket,Edit3,PieChart,TrendingUp,MessageCircle} from "lucide-react";
+import {
+  BarChart,
+  Rocket,
+  Edit3,
+  PieChart,
+  TrendingUp,
+  MessageCircle,
+} from "lucide-react";
 
 const services = [
   {
@@ -7,96 +14,84 @@ const services = [
     title: "Strategy & Planning",
     description:
       "Developing thoughtful strategies and comprehensive plans to drive growth and ensure long-term success.",
-      features: [
-        "Goal Setting",
-        "Market Research",
-        "Actionable Plans",
-        "Targeting Insights",
-      ],
+    features: [
+      "Goal Setting",
+      "Market Research",
+      "Actionable Plans",
+      "Targeting Insights",
+    ],
 
-    image:
-      "/Planing.webp",
+    image: "/Planing.webp",
   },
   {
     icon: <Edit3 className="w-8 h-8 " />,
     title: "Content Creation",
     description:
       "Crafting engaging, original content tailored to captivate your audience and elevate your brand’s voice.",
-      features: [
-        "Creative Writing",
-        "Visual Design",
-        "Brand Messaging",
-        "Engaging Media",
-      ],
-   
-    image:
-      "content.webp",
-      
+    features: [
+      "Creative Writing",
+      "Visual Design",
+      "Brand Messaging",
+      "Engaging Media",
+    ],
+
+    image: "content.webp",
   },
   {
     icon: <TrendingUp className="w-8 h-8 " />,
     title: "Paid Ads Campaigns",
     description:
       "Maximizing reach and ROI through targeted paid ad campaigns that drive results and boost visibility",
-      features: [
-        "Targeted Ads",
-        "Budget Optimization",
-        "ROI Tracking",
-        "Audience Reach",
-      ],
-      
-   
-    image:
-      "Ads.webp",
+    features: [
+      "Targeted Ads",
+      "Budget Optimization",
+      "ROI Tracking",
+      "Audience Reach",
+    ],
+
+    image: "Ads.webp",
   },
   {
     icon: <MessageCircle className="w-8 h-8 " />,
     title: "Audience Engagement",
     description:
       "Building meaningful connections with your audience through interactive content and consistent, engaging communication.",
-      features: [
-        "Interactive Content",
-        "Community Building",
-        "Real-time Interaction",
-        "Brand Loyalty",
-      ],
-      
-   
-    image:
-      "AudienceEngagement.webp",
+    features: [
+      "Interactive Content",
+      "Community Building",
+      "Real-time Interaction",
+      "Brand Loyalty",
+    ],
+
+    image: "AudienceEngagement.webp",
   },
   {
     icon: <Rocket className="w-8 h-8 " />,
     title: "Brand Growth Campaigns",
     description:
       "Designing impactful campaigns to enhance brand visibility, foster loyalty, and accelerate business growth.",
-      features: [
-        "Market Expansion",
-        "Customer Acquisition",
-        "Brand Awareness",
-        "Creative Campaigns",
-      ],
-      
-   
-    image:
-      "digital Marketing.webp",
+    features: [
+      "Market Expansion",
+      "Customer Acquisition",
+      "Brand Awareness",
+      "Creative Campaigns",
+    ],
+
+    image: "digital Marketing.webp",
   },
   {
-    
     icon: <BarChart className="w-8 h-8" />,
     title: "Analytics & Tracking",
     description:
       "Leveraging data-driven insights to track performance, optimize strategies, and drive measurable results for growth.",
-      features: [
-        "Data Insights",
-        "Performance Metrics",
-        "Conversion Tracking",
-        "Continuous Optimization",
-      ],
-      
-   
-    image:
-      "Analytics.webp",
+    features: [
+      "Data Insights",
+      "Performance Metrics",
+      "Conversion Tracking",
+      "Continuous Optimization",
+    ],
+
+    image: "Analytics.webp",
   },
 ];
 
@@ -145,11 +140,16 @@ function SocialMediaMarketing() {
                     }`}
                 >
                   <div className="relative z-10">
-                    <div className={`mb-4 ${activeService.title === service.title
-                      ? " text-white"
-                        : "text-orange-500"
-                    }`}>{service.icon}</div>
-                    
+                    <div
+                      className={`mb-4 ${
+                        activeService.title === service.title
+                          ? " text-white"
+                          : "text-orange-500"
+                      }`}
+                    >
+                      {service.icon}
+                    </div>
+
                     <h3 className="text-lg font-semibold mb-2">
                       {service.title}
                     </h3>
@@ -178,7 +178,7 @@ function SocialMediaMarketing() {
               </div>
               <div className="p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={p-3 rounded-xl ${activeService.color}}>
+                  <div className={`p-3 rounded-xl ${activeService.color}`}>
                     {activeService.icon}
                   </div>
                   <h2 className="text-3xl font-bold">{activeService.title}</h2>
