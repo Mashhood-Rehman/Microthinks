@@ -67,7 +67,7 @@ const GoogleAdsManagement = () => {
               <div className="w-full md:w-1/2">
              
                 <img
-                  src="/public/ota.jpg"
+                  src="/public/otatravel.jpg"
                   alt="Google Ads Management"
                   className="rounded-xl object-cover w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
                 />

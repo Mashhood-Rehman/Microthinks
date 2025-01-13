@@ -21,11 +21,11 @@ export default function Footer() {
     },
     {
       title: "Revenue Management System",
-      path: "/Services/RevenueManagement",
+      path: "/RevenueManagementSystem",
     },
     {
       title: "OTA Listing Management",
-      path: "/Services/OTAManagement",
+      path: "/OTAListingManagement",
     },
     {
       title: "Social Media Marketing",

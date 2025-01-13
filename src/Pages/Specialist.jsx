@@ -26,7 +26,7 @@ const tabContent = [
       "Our tailored strategies help hotels increase direct bookings, reducing reliance on OTAs while improving profitability and customer relationships. We provide innovative marketing techniques and optimize booking platforms for greater conversion rates.",
   },
   {
-    pic: "/public/wp.jpg",
+    pic: "/public/websitemant.png",
     tabName: "Custom Web Design",
     title: "Transform Your Hotel’s Online Presence with a Custom Web Design",
     description:
