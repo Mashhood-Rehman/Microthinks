@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div id="/" className="relative w-full h-[60vh] lg:h-screen ">
       <div
         className="absolute top-0 left-0 w-full h-full bg-fixed bg-center bg-cover custom-img"
-        style={{ backgroundImage: "url('/HeroImage.webp')" }}
+        style={{ backgroundImage: "url('/BG1.webp')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-90"></div>
       </div>
