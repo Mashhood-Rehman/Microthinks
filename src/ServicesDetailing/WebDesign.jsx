@@ -74,6 +74,7 @@ function WebDesign() {
   }, []);
   const [activeService, setActiveService] = useState(services[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  
 
   const handleServiceChange = (service) => {
     setIsTransitioning(true);
