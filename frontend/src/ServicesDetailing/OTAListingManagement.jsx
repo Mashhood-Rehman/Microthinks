@@ -1,10 +1,26 @@
 import { useEffect } from "react";
 
-const PropertyManagementSystem = () => {
+const GoogleAdsManagement = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+<<<<<<< HEAD:frontend/src/ServicesDetailing/OTAListingManagement.jsx
+function OTAListingManagement() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const [activeService, setActiveService] = useState(services[0]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleServiceChange = (service) => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveService(service);
+      setIsTransitioning(false);
+    }, 300);
+  };
+=======
   const workProcessSteps = [
     {
       step: "01",
@@ -27,17 +43,28 @@ const PropertyManagementSystem = () => {
       description: "Regular performance analysis and strategic scaling of successful campaigns to expand your market presence."
     }
   ];
+>>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/ServicesDetailing/OTAListingManagement.jsx
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD:frontend/src/ServicesDetailing/OTAListingManagement.jsx
+      <div className="relative">
+        <div className="relative container mx-auto px-4 py-24">
+          <h1 className="lg:text-6xl text-xl font-bold text-center mb-6">
+            Digital Excellence
+          </h1>
+          <p className="lg:text-xl text-md  text-center text-gray-300 max-w-2xl mx-auto">
+            Crafting exceptional digital experiences through innovative design
+            and cutting-edge technology.
+          </p>
+=======
       <div className="container mx-auto px-4 pt-32 pb-16 h-[70vh]">
         <div className=" gap-8 items-center ">
           <div className="col-span-12 md:col-span-6 text-center">
             <div className="space-y-6">
               <h1 className="text-5xl font-bold mb-8">
-              Property Management System
-              </h1>
+              OTA Listing Management              </h1>
               <div className="flex items-center justify-center space-x-4 text-sm">
                 <a href="/" className="text-orange-400 hover:text-orange-300 transition-colors duration-300">
                   Home
@@ -56,6 +83,7 @@ const PropertyManagementSystem = () => {
               <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
           </div> */}
+>>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/ServicesDetailing/OTAListingManagement.jsx
         </div>
       </div>
 
@@ -68,20 +96,19 @@ const PropertyManagementSystem = () => {
               <div className="w-full md:w-1/2">
              
                 <img
-                  src="/public/img01.jpg"
+                  src="/public/otatravel.jpg"
                   alt="Google Ads Management"
                   className="rounded-xl object-cover w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="w-full md:w-1/2 space-y-6">
                 <h2 className="text-4xl font-bold text-gray-900">
-                   Property Management System
+                  Our Approach to OTA Listing Management
                 </h2>
                 <div className="space-y-4">
                   <p className="text-gray-600 leading-relaxe">
-                  Microthinks offers combine cutting-edge technology with years of expertise to deliver Google Ads campaigns that achieve exceptional results. Through advanced keyword research, market analysis, and tailored strategies, we maximize ROI by ensuring your ads reach the right audience and drive measurable outcomes.
-
-From crafting compelling ad copy to implementing precise optimizations, we handle every aspect of your Google Ads management with care. Our focus on continuous improvement ensures your campaigns consistently perform at their best, helping you boost visibility, generate leads, or drive sales effectively.</p>
+                  Microthinks.com offers essential approaches for increasing hotel sales and marketing. Our experienced team is devoted to boosting your hotel’s direct booking while implementing modern methods for optimizing daily operations. We are eager to connect your hotel with the perfect audience to empower hotels and hospitality businesses worldwide. Our crafted digital marketing solutions for hotels foster sustainable growth and enhance customer engagement. Whether it’s about designing an engaging website, managing your social media platforms, or optimizing your revenue strategies, our hospitality marketing company is here to support you at every step. Microthinks.com is a reliable partner for growing your hotel’s digital presence globally, offering the expertise needed to boost visibility and accelerate growth across international markets.
+                  </p>
                 
                 </div>
               </div>
@@ -126,12 +153,13 @@ From crafting compelling ad copy to implementing precise optimizations, we handl
           <div className="bg-gray-900 rounded-2xl p-12 text-white text-center transform hover:scale-[1.02] transition-transform duration-300">
             <div className="max-w-3xl mx-auto space-y-8">
               <h2 className="text-4xl font-bold mb-4">
-                Ready to booking ?
+                Ready to Booking?
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              We provide a cutting-edge property management system that streamlines operations, enhances tenant satisfaction, and boosts profitability.  </p>
+                Let our experts create and manage high-performing Google Ads campaigns that drive remarkable results for your business
+              </p>
               <button className="bg-orange-500 text-white px-10 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-colors duration-300 inline-flex items-center group shadow-lg hover:shadow-xl">
-                <span>Start Your Campaign</span>
+                <span> Booking Now</span>
                 <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
               </button>
             </div>
@@ -140,6 +168,12 @@ From crafting compelling ad copy to implementing precise optimizations, we handl
       </div>
     </div>
   );
+<<<<<<< HEAD:frontend/src/ServicesDetailing/OTAListingManagement.jsx
+}
+
+export default OTAListingManagement;
+=======
 };
 
-export default PropertyManagementSystem;
+export default GoogleAdsManagement;
+>>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/ServicesDetailing/OTAListingManagement.jsx

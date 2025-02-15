@@ -1,9 +1,86 @@
-import { useEffect } from "react";
+<<<<<<< HEAD:frontend/src/ServicesDetailing/RevenueManagementSystem.jsx
+import { useEffect, useState } from "react";
+import { Code, Compass, Palette, Rocket, Shield, Zap } from "lucide-react";
 
-const GoogleAdsManagement = () => {
+const services = [
+  {
+    icon: <Palette className="w-8 h-8 " />,
+    title: "Creative Design",
+    description:
+      "Transforming ideas into stunning visual experiences that captivate and engage your audience.",
+    features: [
+      "Brand-aligned aesthetics",
+      "Responsive layouts",
+      "Modern UI patterns",
+    ],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Code className="w-8 h-8 " />,
+    title: "Development",
+    description:
+      "Building robust, scalable websites with cutting-edge technologies and best practices.",
+    features: ["Clean code", "Performance optimized", "SEO friendly"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Compass className="w-8 h-8 " />,
+    title: "UX Strategy",
+    description:
+      "Crafting intuitive user experiences that guide visitors effortlessly to their goals.",
+    features: ["User research", "Journey mapping", "Interaction design"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1553484771-047a44eee27f?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Shield className="w-8 h-8 " />,
+    title: "Maintenance",
+    description:
+      "Keeping your digital presence secure, up-to-date, and performing at its best.",
+    features: ["Security updates", "Performance monitoring", "Content updates"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Zap className="w-8 h-8 " />,
+    title: "Performance",
+    description:
+      "Optimizing every aspect of your website for lightning-fast performance.",
+    features: ["Speed optimization", "Core Web Vitals", "CDN integration"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2340",
+  },
+  {
+    icon: <Rocket className="w-8 h-8 " />,
+    title: "Growth",
+    description:
+      "Implementing strategies that drive traffic, engagement, and conversions.",
+    features: ["SEO optimization", "Analytics", "Conversion optimization"],
+    color: "bg-white",
+    image:
+      "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&q=80&w=2340",
+  },
+];
+=======
+import { useEffect } from "react";
+>>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/ServicesDetailing/RevenueManagementSystem.jsx
+
+const RevenueManagementSystem = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+<<<<<<< HEAD:frontend/src/ServicesDetailing/RevenueManagementSystem.jsx
+  const [activeService, setActiveService] = useState(services[0]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+=======
+>>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/ServicesDetailing/RevenueManagementSystem.jsx
 
   const workProcessSteps = [
     {
@@ -31,12 +108,23 @@ const GoogleAdsManagement = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD:frontend/src/ServicesDetailing/RevenueManagementSystem.jsx
+      <div className="relative">
+        <div className="relative container mx-auto px-4 py-24">
+          <h1 className="lg:text-6xl text-xl font-bold text-center mb-6">
+            Digital Excellence
+          </h1>
+          <p className="lg:text-xl text-md text-center text-gray-300 max-w-2xl mx-auto">
+            Crafting exceptional digital experiences through innovative design
+            and cutting-edge technology.
+          </p>
+=======
       <div className="container mx-auto px-4 pt-32 pb-16 h-[70vh]">
         <div className=" gap-8 items-center ">
           <div className="col-span-12 md:col-span-6 text-center">
             <div className="space-y-6">
               <h1 className="text-5xl font-bold mb-8">
-                Google Ads Management
+              Revenue Management System
               </h1>
               <div className="flex items-center justify-center space-x-4 text-sm">
                 <a href="/" className="text-orange-400 hover:text-orange-300 transition-colors duration-300">
@@ -56,6 +144,7 @@ const GoogleAdsManagement = () => {
               <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
           </div> */}
+>>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/ServicesDetailing/RevenueManagementSystem.jsx
         </div>
       </div>
 
@@ -68,19 +157,18 @@ const GoogleAdsManagement = () => {
               <div className="w-full md:w-1/2">
              
                 <img
-                  src="/public/gogleads.jpg"
+                  src="/public/img02.jpg"
                   alt="Google Ads Management"
                   className="rounded-xl object-cover w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="w-full md:w-1/2 space-y-6">
                 <h2 className="text-4xl font-bold text-gray-900">
-                  Our Approach to Google Ads
+                Revenue Management System
                 </h2>
                 <div className="space-y-4">
                   <p className="text-gray-600 leading-relaxe">
-                  We combine cutting-edge technology with years of expertise to deliver Google Ads campaigns that achieve exceptional results. Through advanced keyword research, market analysis, and tailored strategies, we maximize ROI by ensuring your ads reach the right audience and drive measurable outcomes.
-
+                  Microthinks cutting-edge technology with years of expertise to deliver Google Ads campaigns that achieve exceptional results. Through advanced keyword research, market analysis, and tailored strategies, we maximize ROI by ensuring your ads reach the right audience and drive measurable outcomes.
 From crafting compelling ad copy to implementing precise optimizations, we handle every aspect of your Google Ads management with care. Our focus on continuous improvement ensures your campaigns consistently perform at their best, helping you boost visibility, generate leads, or drive sales effectively.</p>
                 
                 </div>
@@ -126,7 +214,7 @@ From crafting compelling ad copy to implementing precise optimizations, we handl
           <div className="bg-gray-900 rounded-2xl p-12 text-white text-center transform hover:scale-[1.02] transition-transform duration-300">
             <div className="max-w-3xl mx-auto space-y-8">
               <h2 className="text-4xl font-bold mb-4">
-                Ready to Transform Your Ad Performance?
+                Ready For Booking?
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
                 Let our experts create and manage high-performing Google Ads campaigns that drive remarkable results for your business
@@ -143,4 +231,8 @@ From crafting compelling ad copy to implementing precise optimizations, we handl
   );
 };
 
-export default GoogleAdsManagement;
+<<<<<<< HEAD:frontend/src/ServicesDetailing/RevenueManagementSystem.jsx
+export default RevenueManagementSystem;
+=======
+export default RevenueManagementSystem;
+>>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/ServicesDetailing/RevenueManagementSystem.jsx

@@ -26,7 +26,11 @@ const tabContent = [
       "Our tailored strategies help hotels increase direct bookings, reducing reliance on OTAs while improving profitability and customer relationships. We provide innovative marketing techniques and optimize booking platforms for greater conversion rates.",
   },
   {
+<<<<<<< HEAD:frontend/src/Pages/Specialist.jsx
+    pic: "/webdesign.jpg",
+=======
     pic: "/public/websitemant.png",
+>>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/Pages/Specialist.jsx
     tabName: "Custom Web Design",
     title: "Transform Your Hotel’s Online Presence with a Custom Web Design",
     description:
@@ -141,7 +145,7 @@ export default function Specialist() {
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`  border px-2 py-1 border-gray-500  rounded-full text-md lg:text-md ${
+            className={`  border px-2 py-1 border-gray-500  rounded-full text-sm lg:text-lg ${
               activeTab === tab ? "bg-[#1F2456] text-white" : " text-gray-800"
             }  hover:bg-[#1F2456] hover:text-white transition-colors duration-300`}
             onClick={() => setActiveTab(tab)}

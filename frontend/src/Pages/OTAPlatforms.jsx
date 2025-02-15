@@ -39,14 +39,6 @@ export default function OTAPlatforms() {
     }
   }, [isHovering]);
 
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
-  };
-
   return (
     <section className="container mx-auto py-16 px-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl shadow-lg">
       <div
@@ -79,7 +71,7 @@ export default function OTAPlatforms() {
               </div>
             ))}
           </div>
-         
+
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
             {images.map((_, index) => (
               <button
