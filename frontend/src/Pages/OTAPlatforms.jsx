@@ -88,7 +88,7 @@ export default function OTAPlatforms() {
 
         <div className="space-y-8">
           <div>
-            <h2 className="text-4xl font-bold tracking-tight lg:text-5xl mb-4 font-serif text-[#1F2456]">
+            <h2 className="text-4xl font-bold tracking-tight lg:text-5xl mb-4  text-[#1F2456]">
               OTA Listing
             </h2>
             <div className="w-30 h-1 bg-gradient-to-r text-[#1F2456] rounded-full"></div>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Navbar from "../Header/Navbar";
 
 const tabs = [
   "Hotel marketing services",
@@ -27,7 +26,11 @@ const tabContent = [
       "Our tailored strategies help hotels increase direct bookings, reducing reliance on OTAs while improving profitability and customer relationships. We provide innovative marketing techniques and optimize booking platforms for greater conversion rates.",
   },
   {
+<<<<<<< HEAD:frontend/src/Pages/Specialist.jsx
     pic: "/webdesign.jpg",
+=======
+    pic: "/public/websitemant.png",
+>>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/Pages/Specialist.jsx
     tabName: "Custom Web Design",
     title: "Transform Your Hotel’s Online Presence with a Custom Web Design",
     description:
@@ -64,7 +67,7 @@ export default function Specialist() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className=" grid grid-cols-1 lg:grid-cols-2  items-center  justify-between gap-6"
+            className=" grid grid-cols-1 lg:grid-cols-2  items-start  justify-start gap-6"
           >
             {/* Left Column: Image */}
             <div className=" w-full h-full">
@@ -78,7 +81,7 @@ export default function Specialist() {
 
             {/* Right Column: Title & Description */}
             <div className="">
-              <h2 className="text-xl w-72 lg:w-96  lg:text-3xl font-serif mb-4">
+              <h2 className="text-xl w-72 lg:w-96  lg:text-3xl  mb-4">
                 {activeContent.title}
               </h2>
               <p className="text-gray-600 text-sm w-72 lg:w-96 leading-relaxed mb-4">
@@ -92,9 +95,9 @@ export default function Specialist() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#1F2456] text-white p-6 rounded-xl mt-8"
+            className="bg-[#1F2456] flex items-center justify-center flex-col text-white p-6 rounded-xl mt-8"
           >
-            <h3 className="text-xl font-serif mb-3">Grow your Hotels</h3>
+            <h3 className="text-4xl   mb-3">Grow your Hotels</h3>
             <p className="mb-4">
               Microthinks.com offers essential approaches for increasing hotel
               sales and marketing.
@@ -123,17 +126,16 @@ export default function Specialist() {
   if (!mounted) return null;
 
   return (
-    <div id="about-us" className="max-w-6xl mx-auto px-4 py-8 font-sans">
-      <Navbar />
+    <div id="about-us" className=" max-w-6xl mx-auto px-4 py-8 font-sans">
 
       {/* Main heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="flex flex-col md:flex-row justify-between items-start mb-12 gap-4"
+        className="flex flex-col md:flex-row justify-start items-start mb-12 gap-4"
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif max-w-md leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl   leading-tight">
           Giving the best just for you
         </h1>
       </motion.div>
