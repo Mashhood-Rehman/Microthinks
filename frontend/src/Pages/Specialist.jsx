@@ -26,11 +26,7 @@ const tabContent = [
       "Our tailored strategies help hotels increase direct bookings, reducing reliance on OTAs while improving profitability and customer relationships. We provide innovative marketing techniques and optimize booking platforms for greater conversion rates.",
   },
   {
-<<<<<<< HEAD:frontend/src/Pages/Specialist.jsx
-    pic: "/webdesign.jpg",
-=======
     pic: "/public/websitemant.png",
->>>>>>> e6799705663251be32418bd7a3d54df7c09b513e:src/Pages/Specialist.jsx
     tabName: "Custom Web Design",
     title: "Transform Your Hotel’s Online Presence with a Custom Web Design",
     description:
@@ -127,7 +123,6 @@ export default function Specialist() {
 
   return (
     <div id="about-us" className=" max-w-6xl mx-auto px-4 py-8 font-sans">
-
       {/* Main heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
