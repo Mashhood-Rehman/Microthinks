@@ -7,44 +7,44 @@ const tabs = [
   "Hotel's direct booking",
   "Custom Web Design",
   "Revenue Management System",
-  "OTA Listing Management",
+  "Google Ads Management",
 ];
 
 const tabContent = [
   {
-    pic: "/Hotel1.webp",
+    pic: "/BestHotel.webp",
     tabName: "Hotel marketing services",
     title: "Boost Your Hotel’s Success with Our Expert Marketing Solutions",
     description:
       "At Microthinks.com, we elevate your hotel’s online visibility with innovative and customized solutions to strengthen guest satisfaction. We leverage our skills in hotel marketing services, providing digital tactics for the hospitality industry. Our mission is to increase your hotel’s digital footprint and profitability through our tailored hotel promotion strategies.",
   },
   {
-    pic: "/Sitting.jpg",
+    pic: "/booking.webp",
     tabName: "Hotel's direct booking",
     title: "Maximize Your Hotel's Direct Bookings",
     description:
       "Our tailored strategies help hotels increase direct bookings, reducing reliance on OTAs while improving profitability and customer relationships. We provide innovative marketing techniques and optimize booking platforms for greater conversion rates.",
   },
   {
-    pic: "/public/websitemant.png",
+    pic: "/Hotelsite.webp",
     tabName: "Custom Web Design",
     title: "Transform Your Hotel’s Online Presence with a Custom Web Design",
     description:
       "Our custom web design services focus on creating user-friendly, aesthetically pleasing, and functional websites tailored to your hotel's unique brand identity, driving more traffic and conversions.",
   },
   {
-    pic: "/ppp.webp",
+    pic: "/User.webp",
     tabName: "Revenue Management System",
     title: "Optimize Your Hotel’s Pricing with Revenue Management Systems",
     description:
       "We help hotels maximize revenue through dynamic pricing strategies that adapt to market demand and optimize room rates for maximum profitability.",
   },
   {
-    pic: "/pp.webp",
-    tabName: "OTA Listing Management",
+    pic: "/12.gif",
+    tabName: "Google Ads Management",
     title: "Increase Visibility with OTA Listing Management",
     description:
-      "Our OTA Listing Management services ensure your hotel is listed correctly and consistently across various online travel agencies, improving visibility and driving more bookings.",
+      "Our OTA Listing Management services ensure your hotel is listed correctly and consistently across various online travel agencies, improving visibility and driving more bookings. Effortlessly launch, manage, and optimize your PMax campaigns alongside other ad strategies with Microthinks Digital Marketing Platform.",
   },
 ];
 
@@ -63,24 +63,25 @@ export default function Specialist() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className=" grid grid-cols-1 lg:grid-cols-2  items-start  justify-start gap-6"
+            className=" grid grid-cols-1 lg:grid-cols-2  items-start  font-serif justify-start gap-6"
           >
             {/* Left Column: Image */}
             <div className=" w-full h-full">
               <img
-                width={500}
+                width={600}
                 src={activeContent.pic}
                 alt={activeContent.tabName}
-                className=" h-96 object-cover rounded-lg shadow-lg"
+                className=" h-96 object-cover "
               />
             </div>
 
             {/* Right Column: Title & Description */}
             <div className="">
-              <h2 className="text-xl w-72 lg:w-96  lg:text-3xl  mb-4">
+              <h2 className="text-2xl w-72 lg:w-96 font-serif lg:text-3xl  mb-4">
                 {activeContent.title}
               </h2>
-              <p className="text-gray-600 text-sm w-72 lg:w-96 leading-relaxed mb-4">
+              
+              <p className="text-gray-600 text-md w-72 font-serif lg:w-96 leading-relaxed mb-4">
                 {activeContent.description}
               </p>
             </div>
@@ -130,7 +131,7 @@ export default function Specialist() {
         transition={{ duration: 0.4 }}
         className="flex flex-col md:flex-row justify-start items-start mb-12 gap-4"
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl   leading-tight">
+        <h1 className="text-4xl md:text-5xl  text-gray-800 lg:text-6xl font-serif  leading-tight">
           Giving the best just for you
         </h1>
       </motion.div>
