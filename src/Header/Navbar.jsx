@@ -8,7 +8,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const navbar = [
-    { name: "Home", id: "/" },
+    { name: "Home", id: "home" },
     { name: "About", id: "about-us" },
     { name: "Services", id: "service" },
     { name: "OTA Platforms", id: "Ota-Platforms" },
@@ -47,7 +47,7 @@ export default function Navbar() {
       className={`fixed w-full z-50 ease-in-out transition-all duration-300 ${
         isScrolled
           ? "bg-[#1F2456] text-white backdrop-blur-md shadow-md"
-          : "bg-transparent text-white"
+          : "bg-[#1F2456] text-white"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -65,7 +65,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <button className="hidden md:flex items-center space-x-8">
             {navbar.map((item) => (
               <button
                 key={item.name}
@@ -75,7 +75,7 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
-          </div>
+          </button>
 
           {/* Mobile Menu Button */}
           <button
