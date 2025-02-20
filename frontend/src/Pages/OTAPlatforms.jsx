@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const images = [
   {
-    src: "/pp.webp", 
+    src: "/pp.webp",
     title: "Deluxe Hotel",
     stats: [
       { value: "41:1 %", label: "Total impression generated" },
@@ -63,8 +63,10 @@ export default function OTAPlatforms() {
   }, [isHovering]);
 
   return (
-    <section  id="Ota-Platforms" className="container mx-auto py-16 px-4">
-      <h1 className="text-4xl text-gray-800 font-bold mb-8 font-serif">Featured Case Studies</h1>
+    <section id="Ota-Platforms" className="container mx-auto py-16 px-4">
+      <h1 className="text-4xl text-gray-800 font-bold mb-8 font-serif">
+        Featured Case Studies
+      </h1>
       <div
         className="relative rounded-3xl overflow-hidden shadow-2xl w-full h-[500px] bg-gray-900"
         onMouseEnter={() => setIsHovering(true)}
@@ -94,14 +96,10 @@ export default function OTAPlatforms() {
                   </div>
                 ))}
               </div>
-              {/* <button className="mt-6 border px-4 py-2 rounded-full border-white text-white hover:bg-white hover:text-black transition">
-                Read Case Study <ChevronRight className="inline-block w-5 h-5" />
-              </button> */}
             </div>
           </div>
         ))}
 
-      
         <button
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 p-2 rounded-full text-white"
           onClick={() =>
@@ -112,9 +110,7 @@ export default function OTAPlatforms() {
         </button>
         <button
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 p-2 rounded-full text-white"
-          onClick={() =>
-            setCurrentImage((prev) => (prev + 1) % images.length)
-          }
+          onClick={() => setCurrentImage((prev) => (prev + 1) % images.length)}
         >
           {/* <ArrowRight className="w-6 h-6" /> */}
         </button>

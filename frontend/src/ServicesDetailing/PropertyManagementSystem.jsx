@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const RevenueManagementSystem = () => {
+const PropertyManagementSystem = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -9,23 +9,27 @@ const RevenueManagementSystem = () => {
     {
       step: "01",
       title: "Strategic Planning",
-      description: "We analyze your business goals, target audience, and competitors to develop a data-driven advertising strategy that aligns with your objectives."
+      description:
+        "We analyze your business goals, target audience, and competitors to develop a data-driven advertising strategy that aligns with your objectives.",
     },
     {
       step: "02",
       title: "Campaign Setup",
-      description: "Our experts configure your Google Ads account with precise targeting, compelling ad copy, and proper tracking implementation."
+      description:
+        "Our experts configure your Google Ads account with precise targeting, compelling ad copy, and proper tracking implementation.",
     },
     {
       step: "03",
       title: "Optimization & Testing",
-      description: "Continuous A/B testing, bid management, and performance optimization to maximize your campaign's ROI and reach."
+      description:
+        "Continuous A/B testing, bid management, and performance optimization to maximize your campaign's ROI and reach.",
     },
     {
       step: "04",
       title: "Analysis & Scaling",
-      description: "Regular performance analysis and strategic scaling of successful campaigns to expand your market presence."
-    }
+      description:
+        "Regular performance analysis and strategic scaling of successful campaigns to expand your market presence.",
+    },
   ];
 
   return (
@@ -36,10 +40,13 @@ const RevenueManagementSystem = () => {
           <div className="col-span-12 md:col-span-6 text-center">
             <div className="space-y-6">
               <h1 className="text-5xl font-bold mb-8">
-              Revenue Management System
+                Property Management System
               </h1>
               <div className="flex items-center justify-center space-x-4 text-sm">
-                <a href="/" className="text-orange-400 hover:text-orange-300 transition-colors duration-300">
+                <a
+                  href="/"
+                  className="text-orange-400 hover:text-orange-300 transition-colors duration-300"
+                >
                   Home
                 </a>
                 <span className="text-gray-500">→</span>
@@ -61,27 +68,35 @@ const RevenueManagementSystem = () => {
 
       {/* Main Content */}
       <div className="min-h-screen bg-white py-16">
-        <div className="container mx-auto px-4">         
+        <div className="container mx-auto px-4">
           {/* About Section */}
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-xl mb-12 hover:shadow-2xl transition-shadow duration-300">
             <div className="flex flex-col md:flex-row  gap-8">
               <div className="w-full md:w-1/2">
-             
                 <img
-                  src="/public/img02.jpg"
+                  src="/public/img01.jpg"
                   alt="Google Ads Management"
                   className="rounded-xl object-cover w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="w-full md:w-1/2 space-y-6">
                 <h2 className="text-4xl font-bold text-gray-900">
-                Revenue Management System
+                  Property Management System
                 </h2>
                 <div className="space-y-4">
                   <p className="text-gray-600 leading-relaxe">
-                  Microthinks cutting-edge technology with years of expertise to deliver Google Ads campaigns that achieve exceptional results. Through advanced keyword research, market analysis, and tailored strategies, we maximize ROI by ensuring your ads reach the right audience and drive measurable outcomes.
-From crafting compelling ad copy to implementing precise optimizations, we handle every aspect of your Google Ads management with care. Our focus on continuous improvement ensures your campaigns consistently perform at their best, helping you boost visibility, generate leads, or drive sales effectively.</p>
-                
+                    Microthinks offers combine cutting-edge technology with
+                    years of expertise to deliver Google Ads campaigns that
+                    achieve exceptional results. Through advanced keyword
+                    research, market analysis, and tailored strategies, we
+                    maximize ROI by ensuring your ads reach the right audience
+                    and drive measurable outcomes. From crafting compelling ad
+                    copy to implementing precise optimizations, we handle every
+                    aspect of your Google Ads management with care. Our focus on
+                    continuous improvement ensures your campaigns consistently
+                    perform at their best, helping you boost visibility,
+                    generate leads, or drive sales effectively.
+                  </p>
                 </div>
               </div>
             </div>
@@ -101,7 +116,7 @@ From crafting compelling ad copy to implementing precise optimizations, we handl
                       <div className="absolute right-0 w-3 h-3 bg-gray-200 transform rotate-45 -translate-y-1/2"></div>
                     </div>
                   )}
-                  
+
                   {/* Card Content */}
                   <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative z-10 h-full group">
                     <div className="flex items-start justify-between mb-6">
@@ -124,15 +139,17 @@ From crafting compelling ad copy to implementing precise optimizations, we handl
           {/* CTA Section */}
           <div className="bg-gray-900 rounded-2xl p-12 text-white text-center transform hover:scale-[1.02] transition-transform duration-300">
             <div className="max-w-3xl mx-auto space-y-8">
-              <h2 className="text-4xl font-bold mb-4">
-                Ready For Booking?
-              </h2>
+              <h2 className="text-4xl font-bold mb-4">Ready to booking ?</h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                Let our experts create and manage high-performing Google Ads campaigns that drive remarkable results for your business
+                We provide a cutting-edge property management system that
+                streamlines operations, enhances tenant satisfaction, and boosts
+                profitability.{" "}
               </p>
               <button className="bg-orange-500 text-white px-10 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-colors duration-300 inline-flex items-center group shadow-lg hover:shadow-xl">
                 <span>Start Your Campaign</span>
-                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
               </button>
             </div>
           </div>
@@ -142,4 +159,4 @@ From crafting compelling ad copy to implementing precise optimizations, we handl
   );
 };
 
-export default RevenueManagementSystem;
+export default PropertyManagementSystem;

@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
             Privacy Policy
           </h1>
         </div>
-        <div className="bg-white p-12 flex flex-col items-center justify-center">
+        <div className="bg-white p-12 flex  flex-col items-center justify-center">
           <div className="w-[60vw] space-y-2">
             <p>
               At{" "}

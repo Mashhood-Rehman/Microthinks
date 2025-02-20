@@ -124,7 +124,6 @@ export default function Specialist() {
 
   return (
     <div id="about-us" className=" max-w-6xl mx-auto px-4 py-8 font-sans">
-
       {/* Main heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -142,7 +141,7 @@ export default function Specialist() {
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`  border px-2 py-1 border-gray-500  rounded-full text-md lg:text-md ${
+            className={`  border px-2 py-1 border-gray-500  rounded-full text-sm lg:text-lg ${
               activeTab === tab ? "bg-[#1F2456] text-white" : " text-gray-800"
             }  hover:bg-[#1F2456] hover:text-white transition-colors duration-300`}
             onClick={() => setActiveTab(tab)}
