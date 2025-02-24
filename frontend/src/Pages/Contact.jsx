@@ -205,23 +205,7 @@ const Contact = ({ ref }) => {
               </div>
             </div>
 
-            <div className="space-y-2">
-              <label htmlFor="country" className="font-medium">Country <span className="text-red-500">*</span></label>
-              <select
-                id="country"
-                name="country"
-                value={formData.country}
-                onChange={handleChange}
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              >
-                <option value="">Select a country</option>
-                <option value="US">United States</option>
-                <option value="UK">United Kingdom</option>
-                <option value="CA">Canada</option>
-                {/* Add more countries as needed */}
-              </select>
-            </div>
+            
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">

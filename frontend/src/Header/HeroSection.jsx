@@ -41,7 +41,7 @@ const HeroSection = () => {
                   className="rounded-2xl shadow-2xl w-full h-full"
                 />
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-2 text-xs sm:text-sm rounded-md">
-                  BOOST VISIBILITY
+                Enhance Online Presence
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ const HeroSection = () => {
                       className="rounded-lg shadow-xl"
                     />
                     <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-3 sm:px-4 py-1 sm:py-2 text-xs rounded-full">
-                      CAPTURE DEMAND
+                    Attract Guests
                     </div>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ const HeroSection = () => {
                       height={300}
                     />
                     <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 sm:px-6 py-1 sm:py-2 text-xs sm:text-sm rounded-md">
-                      BOOST VISIBILITY
+                    Enhance Online Presence
                     </div>
                   </div>
                 </div>
@@ -122,7 +122,19 @@ const HeroSection = () => {
           </div>
 
           {/* Background curved shape */}
-          <div className="hidden sm:block absolute bottom-0 left-0 w-full h-1/4 sm:h-1/3 min-h-[120px] sm:min-h-[180px] bg-gray-200 rounded-t-[60px] sm:rounded-t-[80px]" />
+          <div className="absolute bottom-0 left-0 w-full z-0 overflow-hidden">
+  <svg
+    className="w-full h-auto"
+    viewBox="0 0 1440 320"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill="#E5E7EB" /* This is gray-200 */
+      d="M0,192L48,192C96,192,192,192,288,208C384,224,480,256,576,234.7C672,213,768,139,864,133.3C960,128,1056,192,1152,218.7C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+    />
+  </svg>
+</div>
         </div>
       </div>
     </div>

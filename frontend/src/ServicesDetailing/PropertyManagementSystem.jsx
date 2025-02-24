@@ -1,162 +1,179 @@
 import { useEffect } from "react";
 
-const PropertyManagementSystem = () => {
+const GoogleAdsManagement = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const workProcessSteps = [
-    {
-      step: "01",
-      title: "Strategic Planning",
-      description:
-        "We analyze your business goals, target audience, and competitors to develop a data-driven advertising strategy that aligns with your objectives.",
-    },
-    {
-      step: "02",
-      title: "Campaign Setup",
-      description:
-        "Our experts configure your Google Ads account with precise targeting, compelling ad copy, and proper tracking implementation.",
-    },
-    {
-      step: "03",
-      title: "Optimization & Testing",
-      description:
-        "Continuous A/B testing, bid management, and performance optimization to maximize your campaign's ROI and reach.",
-    },
-    {
-      step: "04",
-      title: "Analysis & Scaling",
-      description:
-        "Regular performance analysis and strategic scaling of successful campaigns to expand your market presence.",
-    },
-  ];
+  
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="text-gray-900 relative w-full bg-gray-100">
       {/* Hero Section */}
-      <div className="container mx-auto px-4 pt-32 pb-16 h-[70vh]">
-        <div className=" gap-8 items-center ">
-          <div className="col-span-12 md:col-span-6 text-center">
-            <div className="space-y-6">
-              <h1 className="text-5xl font-bold mb-8">
-                Property Management System
-              </h1>
-              <div className="flex items-center justify-center space-x-4 text-sm">
-                <a
-                  href="/"
-                  className="text-orange-400 hover:text-orange-300 transition-colors duration-300"
-                >
-                  Home
-                </a>
-                <span className="text-gray-500">→</span>
-                <span className="text-white">Services Details</span>
+      <div className="w-full px-4 lg:px-5 lg:pt-10 pt-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif leading-tight text-gray-900 mt-16 sm:mt-20">
+           Property Management System
+          </h1>
+          <p className="mt-4 text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-2 sm:px-4">
+          We optimize your hotel's management with seamless automation, ensuring efficient operations, increased productivity, and an enhanced guest experience.
+          </p>
+
+          {/* Images Section */}
+          <div className="relative mt-2 pb-12 sm:pb-16 lg:pb-32">
+            {/* Mobile Layout */}
+            <div className="block sm:hidden">
+              <div className="relative mt-5 w-[90%] mx-auto h-[200px]">
+                <img
+                  src="/PM4.webp"
+                  alt="Boost visibility"
+                  className="rounded-2xl shadow-2xl w-full h-full"
+                />
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-2 text-xs sm:text-sm rounded-md">
+                Automate Operations
+                </div>
               </div>
             </div>
-          </div>
-          {/* <div className="col-span-12 md:col-span-3">
-          <img
-                src="/public/gads.svg"
-                alt="Team"
-              />
-            <div className="rounded-2xl overflow-hidden h-48 relative group">
-              <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+
+            {/* Desktop Layout */}
+            <div className="hidden sm:block relative">
+              <div className="max-w-6xl mx-auto relative h-[350px] sm:h-[450px]">
+                {/* Dotted Line */}
+                <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                  <line
+                    x1="15%"
+                    y1="50%"
+                    x2="50%"
+                    y2="35%"
+                    stroke="black"
+                    strokeDasharray="5,5"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="50%"
+                    y1="35%"
+                    x2="85%"
+                    y2="50%"
+                    stroke="black"
+                    strokeDasharray="5,5"
+                    strokeWidth="2"
+                  />
+                </svg>
+
+                {/* Left Image */}
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+                  <div className="relative w-[200px] sm:w-[280px] h-[150px] sm:h-[190px]">
+                    <img src="/PM2.webp" alt="Capture demand" className="rounded-lg shadow-xl" />
+                    <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-3 sm:px-4 py-1 sm:py-2 text-xs rounded-full">
+                    Hotel Management
+                    </div>
+                  </div>
+                </div>
+
+                {/* Center Image */}
+                <div className="absolute left-1/2 -translate-x-1/2 top-1/3 z-20">
+                  <div className="relative w-[500px] sm:w-[400px] h-[500px] sm:h-[340px]">
+                    <img
+                      src="/PM5.gif"
+                      alt="Boost visibility"
+                      className="rounded-2xl shadow-2xl"
+                    />
+                    <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 sm:px-6 py-1 sm:py-2 text-xs sm:text-sm rounded-md">
+                    Automate Operations
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Image */}
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10">
+                  <div className="relative w-[200px] sm:w-[280px] h-[150px] sm:h-[190px]">
+                    <img src="/PM4.webp" alt="Drive direct" className="rounded-lg shadow-xl" />
+                    <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-3 sm:px-4 py-1 sm:py-2 text-xs rounded-full">
+                    Improve Efficiency
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div> */}
+            <div className="absolute bottom-0 left-0 w-full z-0 overflow-hidden">
+  <svg
+    className="w-full h-auto"
+    viewBox="0 0 1440 320"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill="#E5E7EB" /* This is gray-200 */
+      d="M0,192L48,192C96,192,192,192,288,208C384,224,480,256,576,234.7C672,213,768,139,864,133.3C960,128,1056,192,1152,218.7C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+    />
+  </svg>
+</div>
+          </div>
+     
+        
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="min-h-screen bg-white py-16">
+      <div className="min-h-screen bg-white py-12 sm:py-16">
         <div className="container mx-auto px-4">
+          <h1 className="text-4xl sm:text-5xl font-serif  text-gray-800"> Smart Property Management </h1>
           {/* About Section */}
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-xl mb-12 hover:shadow-2xl transition-shadow duration-300">
-            <div className="flex flex-col md:flex-row  gap-8">
+          <div className="bg-white  p-6 md:p-10  mb-8   ">
+            <div className="flex flex-col md:flex-row gap-8">
               <div className="w-full md:w-1/2">
                 <img
-                  src="/public/img01.jpg"
+                  src="/PM3.webp"
                   alt="Google Ads Management"
-                  className="rounded-xl object-cover w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                  className="rounded-xl w-full h-[400px] object-cover  transition-transform duration-300"
                 />
               </div>
-              <div className="w-full md:w-1/2 space-y-6">
-                <h2 className="text-4xl font-bold text-gray-900">
-                  Property Management System
+              <div className="w-full md:w-1/2  mt-16 font-serif space-y-6">
+                <h2 className="text-3xl sm:text-4xl   text-gray-900">
+                Optimize Your Property Management System
                 </h2>
-                <div className="space-y-4">
-                  <p className="text-gray-600 leading-relaxe">
-                    Microthinks offers combine cutting-edge technology with
-                    years of expertise to deliver Google Ads campaigns that
-                    achieve exceptional results. Through advanced keyword
-                    research, market analysis, and tailored strategies, we
-                    maximize ROI by ensuring your ads reach the right audience
-                    and drive measurable outcomes. From crafting compelling ad
-                    copy to implementing precise optimizations, we handle every
-                    aspect of your Google Ads management with care. Our focus on
-                    continuous improvement ensures your campaigns consistently
-                    perform at their best, helping you boost visibility,
-                    generate leads, or drive sales effectively.
-                  </p>
-                </div>
+                <p className="text-gray-600  italic leading-relaxed">
+                Our expert team streamlines your operations with a powerful Property Management System. From seamless reservations to automated workflows, we ensure efficiency, enhanced guest experiences, and maximized revenue.
+                </p>
               </div>
             </div>
           </div>
+        </div>
+        <div className="bg-white p-6 md:p-10 mb-8">
+  <div className="flex flex-col md:flex-row-reverse gap-8">
+    <div className="w-full md:w-1/2">
+      <img
+        src="/14.gif"
+        alt="Google Ads Management"
+        className="rounded-xl object-cover w-full h-auto transition-transform duration-300"
+      />
+    </div>
+    <div className="w-full md:w-1/2 mx-5  mt-16 font-serif space-y-6">
+      <h2 className="text-3xl sm:text-4xl text-gray-900">
+      Simplify operations
+      </h2>
+      <p className="text-gray-600  italic leading-relaxed">
+      Our advanced Property Management System (PMS) is designed to streamline your hotel operations, from seamless reservations and automated check-ins to real-time inventory management. With integrated guest profiles, dynamic pricing, and insightful reporting, you can enhance the guest experience while maximizing revenue. Say goodbye to manual tasks and hello to an efficient, tech-driven approach that keeps your property running smoothly.
+      </p>
+    </div>
+  </div>
+</div>
 
-          {/* Work Process Section */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-              Our Work Process
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {workProcessSteps.map((step, index) => (
-                <div key={index} className="relative group">
-                  {/* Connection Line */}
-                  {index < workProcessSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/4 right-0 w-full h-0.5 bg-gray-200 transform translate-x-1/2">
-                      <div className="absolute right-0 w-3 h-3 bg-gray-200 transform rotate-45 -translate-y-1/2"></div>
-                    </div>
-                  )}
+      </div>
 
-                  {/* Card Content */}
-                  <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative z-10 h-full group">
-                    <div className="flex items-start justify-between mb-6">
-                      <div className="w-16 h-16 bg-orange-500 text-white flex items-center justify-center text-2xl font-bold rounded-lg group-hover:scale-110 transition-transform duration-300">
-                        {step.step}
-                      </div>
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-4 text-gray-900">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gray-900 rounded-2xl p-12 text-white text-center transform hover:scale-[1.02] transition-transform duration-300">
-            <div className="max-w-3xl mx-auto space-y-8">
-              <h2 className="text-4xl font-bold mb-4">Ready to booking ?</h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                We provide a cutting-edge property management system that
-                streamlines operations, enhances tenant satisfaction, and boosts
-                profitability.{" "}
-              </p>
-              <button className="bg-orange-500 text-white px-10 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-colors duration-300 inline-flex items-center group shadow-lg hover:shadow-xl">
-                <span>Start Your Campaign</span>
-                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">
-                  →
-                </span>
-              </button>
-            </div>
-          </div>
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-orange-200 to-blue-900/80 py-12 lg:py-12 px-6 lg:px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h2 className="text-3xl sm:text-4xl font-serif text-gray-800">
+            Explore the newest hospitality tech trends and insights from Team Microthink.
+          </h2>
+          <button className="bg-gray-900 text-white px-6 py-3 text-lg rounded-full hover:bg-gray-800 transition-colors">
+            Subscribe Today!
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default PropertyManagementSystem;
+export default GoogleAdsManagement;

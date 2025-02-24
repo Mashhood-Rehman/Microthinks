@@ -6,7 +6,7 @@ const tabs = [
   "Hotel marketing services",
   "Hotel's direct booking",
   "Custom Web Design",
-  "Revenue Management System",
+  "OTA Listing Management",
   "Google Ads Management",
 ];
 
@@ -34,17 +34,17 @@ const tabContent = [
   },
   {
     pic: "/User.webp",
-    tabName: "Revenue Management System",
-    title: "Optimize Your Hotel’s Pricing with Revenue Management Systems",
+    tabName: "OTA Listing Management",
+    title: "Increase Visibility with OTA Listing Management",
     description:
-      "We help hotels maximize revenue through dynamic pricing strategies that adapt to market demand and optimize room rates for maximum profitability.",
+      "Our OTA Listing Management services ensure your hotel is listed correctly and consistently across various online travel agencies, improving visibility and driving more bookings. Effortlessly launch, manage, and optimize your PMax campaigns alongside other ad strategies with Microthinks Digital Marketing Platform",
   },
   {
     pic: "/12.gif",
     tabName: "Google Ads Management",
-    title: "Increase Visibility with OTA Listing Management",
+    title: "Maximize your hotel’s engagement ",
     description:
-      "Our OTA Listing Management services ensure your hotel is listed correctly and consistently across various online travel agencies, improving visibility and driving more bookings. Effortlessly launch, manage, and optimize your PMax campaigns alongside other ad strategies with Microthinks Digital Marketing Platform.",
+      " Booking with our expert Google ads management services. Let us help you drive maximum traffic to your website through our unique Google Ads strategy. According to our hotel promotion strategies, we execute targeted marketing campaigns that specifically reach your target audience at the right time and place. We employ strategic keyword selection to raise visibility in search engines. It will help your website stay at the forefront when travelers are searching for accommodations",
   },
 ];
 

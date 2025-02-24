@@ -1,187 +1,184 @@
-import { useEffect, useState } from "react";
-import { Code, Compass, Palette, Rocket, Shield, Zap } from "lucide-react";
+import { useEffect } from "react";
+import { ArrowLeft } from "lucide-react";
 
-const services = [
-  {
-    icon: <Palette className="w-8 h-8 " />,
-    title: "Creative Design",
-    description:
-      "Transforming ideas into stunning visual experiences that captivate and engage your audience.",
-    features: [
-      "Brand-aligned aesthetics",
-      "Responsive layouts",
-      "Modern UI patterns",
-    ],
-    color: "bg-white",
-    image:
-      "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=2340",
-  },
-  {
-    icon: <Code className="w-8 h-8 " />,
-    title: "Development",
-    description:
-      "Building robust, scalable websites with cutting-edge technologies and best practices.",
-    features: ["Clean code", "Performance optimized", "SEO friendly"],
-    color: "bg-white",
-    image:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=2340",
-  },
-  {
-    icon: <Compass className="w-8 h-8 " />,
-    title: "UX Strategy",
-    description:
-      "Crafting intuitive user experiences that guide visitors effortlessly to their goals.",
-    features: ["User research", "Journey mapping", "Interaction design"],
-    color: "bg-white",
-    image:
-      "https://images.unsplash.com/photo-1553484771-047a44eee27f?auto=format&fit=crop&q=80&w=2340",
-  },
-  {
-    icon: <Shield className="w-8 h-8 " />,
-    title: "Maintenance",
-    description:
-      "Keeping your digital presence secure, up-to-date, and performing at its best.",
-    features: ["Security updates", "Performance monitoring", "Content updates"],
-    color: "bg-white",
-    image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2340",
-  },
-  {
-    icon: <Zap className="w-8 h-8 " />,
-    title: "Performance",
-    description:
-      "Optimizing every aspect of your website for lightning-fast performance.",
-    features: ["Speed optimization", "Core Web Vitals", "CDN integration"],
-    color: "bg-white",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2340",
-  },
-  {
-    icon: <Rocket className="w-8 h-8 " />,
-    title: "Growth",
-    description:
-      "Implementing strategies that drive traffic, engagement, and conversions.",
-    features: ["SEO optimization", "Analytics", "Conversion optimization"],
-    color: "bg-white",
-    image:
-      "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&q=80&w=2340",
-  },
-];
-
-function WebDesign() {
+const GoogleAdsManagement = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [activeService, setActiveService] = useState(services[0]);
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const handleServiceChange = (service) => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setActiveService(service);
-      setIsTransitioning(false);
-    }, 300);
-  };
+  
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="text-gray-900 relative w-full bg-gray-100">
+     
       {/* Hero Section */}
-      <div className="relative">
-        <div className="relative container mx-auto px-4 py-24">
-          <h1 className="text-6xl font-bold text-center mb-6">
-            Website Design{" "}
+ 
+      <div className="w-full px-4 lg:px-5 lg:pt-10 pt-6">
+    <div className="max-w-7xl mx-auto text-center">
+   
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif leading-tight text-gray-900 mt-16 sm:mt-20">
+          Custom Web Design
           </h1>
-          <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto">
-            Crafting exceptional digital experiences through innovative design
-            and cutting-edge technology.
+          <p className="mt-4 text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-2 sm:px-4">
+          We elevate your brand’s online presence with cutting-edge web design and development, ensuring a seamless user experience, higher engagement, and increased conversions.
           </p>
+
+          {/* Images Section */}
+          <div className="relative mt-2 pb-12 sm:pb-16 lg:pb-32">
+            {/* Mobile Layout */}
+            <div className="block sm:hidden">
+              <div className="relative mt-5 w-[90%] mx-auto h-[200px]">
+                <img
+                  src="/18.gif"
+                  alt="Boost visibility"
+                  className="rounded-2xl shadow-2xl w-full h-full"
+                />
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-2 text-xs sm:text-sm rounded-md">
+                Responsive Design
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden sm:block relative">
+              <div className="max-w-6xl mx-auto relative h-[350px] sm:h-[450px]">
+                {/* Dotted Line */}
+                <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                  <line
+                    x1="15%"
+                    y1="50%"
+                    x2="50%"
+                    y2="35%"
+                    stroke="black"
+                    strokeDasharray="5,5"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="50%"
+                    y1="35%"
+                    x2="85%"
+                    y2="50%"
+                    stroke="black"
+                    strokeDasharray="5,5"
+                    strokeWidth="2"
+                  />
+                </svg>
+
+                {/* Left Image */}
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+                  <div className="relative w-[200px] sm:w-[280px] h-[150px] sm:h-[190px]">
+                    <img src="/WD3.webp" alt="Capture demand" className="rounded-lg shadow-xl" />
+                    <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-3 sm:px-4 py-1 sm:py-2 text-xs rounded-full">
+                    Unique Websites
+                    </div>
+                  </div>
+                </div>
+
+                {/* Center Image */}
+                <div className="absolute left-1/2 -translate-x-1/2 top-1/3 z-20">
+                  <div className="relative w-[500px] sm:w-[400px] h-[500px] sm:h-[340px]">
+                    <img
+                      src="/WD1.webp"
+                      alt="Boost visibility"
+                      className="rounded-2xl shadow-2xl"
+                    />
+                    <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 sm:px-6 py-1 sm:py-2 text-xs sm:text-sm rounded-md">
+                    Responsive Design
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Image */}
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10">
+                  <div className="relative w-[200px] sm:w-[280px] h-[150px] sm:h-[190px]">
+                    <img src="/WD2.webp" alt="Drive direct" className="rounded-lg shadow-xl" />
+                    <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-3 sm:px-4 py-1 sm:py-2 text-xs rounded-full">
+                    User-Friendly Experience                    
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 w-full z-0 overflow-hidden">
+  <svg
+    className="w-full h-auto"
+    viewBox="0 0 1440 320"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill="#E5E7EB" /* This is gray-200 */
+      d="M0,192L48,192C96,192,192,192,288,208C384,224,480,256,576,234.7C672,213,768,139,864,133.3C960,128,1056,192,1152,218.7C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+    />
+  </svg>
+</div>
+          </div>
+     
+        
         </div>
       </div>
 
-      {/* Services Showcase */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          {/* Service Selection */}
-          <div className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-              {services.map((service, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleServiceChange(service)}
-                  className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300
-                    ${
-                      activeService.title === service.title
-                        ? "bg-orange-500 text-white"
-                        : "bg-[#1F2456] text-gray-300 hover:bg-gray-700"
-                    }`}
-                >
-                  <div className="relative z-10">
-                    <div
-                      className={`mb-4  ${
-                        activeService.title === service.title
-                          ? "  text-white "
-                          : "text-orange-500 "
-                      }`}
-                    >
-                      {service.icon}
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm line-clamp-2">
-                      {service.description}
-                    </p>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Service Details */}
-          <div
-            className={`transition-opacity duration-300 ${
-              isTransitioning ? "opacity-0" : "opacity-100"
-            }`}
-          >
-            <div className="rounded-2xl overflow-hidden bg-[#1F2456]">
-              <div className="aspect-video relative overflow-hidden">
+      {/* Main Content */}
+      <div className="min-h-screen bg-white py-12 sm:py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl sm:text-5xl font-serif  text-gray-800"> Enhance Your Hotel’s Digital Experience</h1>
+          {/* About Section */}
+          <div className="bg-white  p-6 md:p-10  mb-8   ">
+            <div className="flex flex-col md:flex-row gap-8">
+              <div className="w-full md:w-1/2">
                 <img
-                  src={activeService.image}
-                  alt={activeService.title}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  src="/WD3.webp"
+                  alt="Google Ads Management"
+                  className="rounded-xl w-full h-[500px] object-cover  transition-transform duration-300"
                 />
               </div>
-              <div className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  {/* <div className={`p-3 rounded-xl ${activeService.color}`}>
-                    {activeService.icon}
-                  </div> */}
-                  <h2 className="text-3xl font-bold">{activeService.title}</h2>
-                </div>
-                <p className="text-gray-300 text-lg mb-8">
-                  {activeService.description}
+              <div className="w-full md:w-1/2  mt-16 font-serif space-y-6">
+                <h2 className="text-3xl sm:text-4xl   text-gray-900">
+                Custom Website Development
+                </h2>
+                <p className="text-gray-600  italic leading-relaxed">
+                We build high-performance hotel websites tailored to your brand, ensuring a seamless user experience across all devices. Whether using a Content Management System (CMS) like WordPress or a custom-built solution, our websites are designed for speed, security, and easy management. With intuitive booking integrations, SEO optimization, and mobile-friendly designs, we help your hotel attract more guests and increase direct reservations.
                 </p>
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold">Key Features</h3>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {activeService.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-orange-500" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <button className="mt-8 px-8 py-4 rounded-xl font-medium bg-orange-500 text-white hover:shadow-lg hover:scale-105 transition-all duration-300">
-                  Learn More
-                </button>
               </div>
             </div>
           </div>
+        </div>
+        <div className="bg-white p-6 md:p-10 mb-8">
+  <div className="flex flex-col md:flex-row-reverse gap-8">
+    <div className="w-full md:w-1/2">
+      <img
+        src="/19.gif"
+        alt="Google Ads Management"
+        className="rounded-xl object-cover w-full h-auto transition-transform duration-300"
+      />
+    </div>
+    <div className="w-full md:w-1/2 mx-5  mt-16 font-serif space-y-6">
+      <h2 className="text-3xl sm:text-4xl text-gray-900">
+      Elevate Your Brand with Stunning Website Design
+      </h2>
+      <p className="text-gray-600  italic leading-relaxed">
+      Our expert designers craft visually appealing, user-friendly hotel websites that captivate visitors and drive conversions. Using modern UI/UX principles, we create elegant layouts, engaging visuals, and interactive elements that enhance the guest journey. Whether revamping an existing site or building from scratch, we ensure your website reflects your hotel's unique identity while providing seamless navigation, fast load times, and integrated booking solutions.
+      </p>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-orange-200 to-blue-900/80 py-12 lg:py-12 px-6 lg:px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h2 className="text-3xl sm:text-4xl font-serif text-gray-800">
+            Explore the newest hospitality tech trends and insights from Team Microthink.
+          </h2>
+          <button className="bg-gray-900 text-white px-6 py-3 text-lg rounded-full hover:bg-gray-800 transition-colors">
+            Subscribe Today!
+          </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default WebDesign;
+export default GoogleAdsManagement;
